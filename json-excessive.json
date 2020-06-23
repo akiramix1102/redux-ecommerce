@@ -1,0 +1,414 @@
+// quần âu
+[
+    {
+        "id": "101",
+        "title": "QUẦN ÂU NAM MS13",
+        "price": 89,
+        "oldprice": 109,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK334-2-480x635_z3dsvs.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK334-2-480x635_z3dsvs.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871623/trousers/QAUTK334-1-480x635_r0ucqe.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "102",
+        "title": "QUẦN ÂU NAM MS14",
+        "price": 33,
+        "oldprice": 69,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK332-1-480x635_d65yh3.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK332-1-480x635_d65yh3.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK329-2-480x635_tvcrkj.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "103",
+        "title": "QUẦN ÂU NAM MS15",
+        "price": 19,
+        "oldprice": 55,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK329-2-480x635_tvcrkj.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK329-2-480x635_tvcrkj.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK329-1-480x635_uev9a9.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "104",
+        "title": "QUẦN ÂU NAM MS16",
+        "price": 69,
+        "oldprice": 99,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK326-480x635_dqutlc.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK326-480x635_dqutlc.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/QAUTK326-1-1-480x635_v1kvdg.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "105",
+        "title": "QUẦN ÂU NAM MS17",
+        "price": 99,
+        "oldprice": 129,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/QAUTK008-1-480x635_auz4tc.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/QAUTK008-1-480x635_auz4tc.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK005-2-480x635_hxotkk.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "106",
+        "title": "QUẦN ÂU NAM MS18",
+        "price": 66,
+        "oldprice": 99,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK005-2-480x635_hxotkk.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871622/trousers/QAUTK005-2-480x635_hxotkk.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/QAUTK005-1-480x635_pvxesa.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "107",
+        "title": "QUẦN ÂU NAM MS19",
+        "price": 29,
+        "oldprice": 49,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/QAUTK004-4-480x635_bu59yq.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/QAUTK004-4-480x635_bu59yq.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/QAUTK004-1-480x635_nraick.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "108",
+        "title": "QUẦN ÂU NAM MS20",
+        "price": 35,
+        "oldprice": 59,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/AUTK339-480x635_hqqm1o.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/AUTK339-480x635_hqqm1o.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871620/trousers/AUTK003-480x635_kqlrzo.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "109",
+        "title": "QUẦN ÂU NAM MS21",
+        "price": 30,
+        "oldprice": 49,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871620/trousers/AUTK003-480x635_kqlrzo.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871620/trousers/AUTK003-480x635_kqlrzo.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871620/trousers/AUTK003-2-480x635_r0zcvp.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "110",
+        "title": "QUẦN ÂU NAM MS22",
+        "price": 36,
+        "oldprice": 59,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871620/trousers/APL3086-1-480x635_xxnn7l.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871620/trousers/APL3086-1-480x635_xxnn7l.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/APHTK610-3-1-480x635_dpsxpf.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871621/trousers/APHTK332-480x635_nlpnie.jpg"
+        ],
+        "category": "trouser",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    }
+],
+// quần short
+[
+    {
+        "id": "86",
+        "title": "QUẦN SHORT NAM MS13",
+        "price": 10,
+        "oldprice": 19,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871691/short/SKKTK851-1-480x635_bfx2cr.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871691/short/SKKTK851-1-480x635_bfx2cr.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871691/short/SKKTK851-16-480x635_mzeb8j.jpg"
+        ],
+        "category": "short",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "87",
+        "title": "QUẦN SHORT NAM MS14",
+        "price": 29,
+        "oldprice": 49,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871692/short/SKKTK852-480x635_h2c41e.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871692/short/SKKTK852-480x635_h2c41e.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871692/short/SMN526-1-480x635_hkxqq1.jpg"
+        ],
+        "category": "short",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    }
+]
+// quần jean
+[
+    {
+        "id": "70",
+        "title": "QUẦN JEAN NAM MS14",
+        "price": 69,
+        "oldprice": 129,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD6866-2-480x635_lpdzuj.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD6866-2-480x635_lpdzuj.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871539/jean/QJD6835-1-480x635_dtqapb.jpg"
+        ],
+        "category": "jean",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "71",
+        "title": "QUẦN JEAN NAM MS15",
+        "price": 39,
+        "oldprice": 69,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871539/jean/QJD6811_trzjzi.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871539/jean/QJD6811_trzjzi.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD6811-2-480x635_n3576q.jpg"
+        ],
+        "category": "jean",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "72",
+        "title": "QUẦN JEAN NAM MS16",
+        "price": 50,
+        "oldprice": 79,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD19608-2-480x635_k3bne7.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD19608-2-480x635_k3bne7.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871541/jean/QJD19608-1-480x635_hnkw7r.jpg"
+        ],
+        "category": "jean",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": "73",
+        "title": "QUẦN JEAN NAM MS17",
+        "price": 30,
+        "oldprice": 39,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD053-2-480x635_xsvefz.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD053-2-480x635_xsvefz.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591871540/jean/QJD053-1-480x635_l4lpwh.jpg"
+        ],
+        "category": "jean",
+        "sizes": [
+            28,
+            29,
+            30,
+            31,
+            32
+        ]
+    },
+]
+// sơ mi
+[
+    {
+        "id": "42",
+        "title": "ÁO SƠ MI NAM MS14",
+        "price": 35,
+        "oldprice": 39,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN003-2-480x635_wdi6la.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN003-2-480x635_wdi6la.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN003-1-480x635_ijgbsb.jpg"
+        ],
+        "category": "somi",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
+    },
+    {
+        "id": "43",
+        "title": "ÁO SƠ MI NAM MS15",
+        "price": 28,
+        "oldprice": 50,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN004-2-480x635_h3xmke.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN004-2-480x635_h3xmke.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN004-1-480x635_g7dlw0.jpg"
+        ],
+        "category": "somi",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
+    },
+    {
+        "id": "44",
+        "title": "ÁO SƠ MI NAM MS16",
+        "price": 75,
+        "oldprice": 99,
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "rating": 4,
+        "images": "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN001-2-480x635_ackpxe.jpg",
+        "smallImg": [
+            "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN001-2-480x635_ackpxe.jpg",
+            "https://res.cloudinary.com/storeimage/image/upload/v1591870732/so%20mi/SMDCN001-1-480x635_pjxefy.jpg"
+        ],
+        "category": "somi",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
+    }
+
+
+]
