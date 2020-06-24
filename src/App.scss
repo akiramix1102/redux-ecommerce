@@ -275,22 +275,24 @@ body {
     overflow: hidden;
     padding-bottom: 15px;
     animation: text-left 1s;
+
+    
     &-text {
       h1 {
         font-weight: 600;
         letter-spacing: 3px;
         font-size: 50px;
         margin-bottom: 25px;
-        animation: text-left 1s;
+        // animation: text-left 1s;
       }
-      @keyframes text-left {
-        0%{
-          transform: translateX(-396px);
-        }
-        100%{
-          transform: translateX(0);
-        }
-      }
+      // @keyframes text-left {
+      //   0%{
+      //     transform: translateX(-396px);
+      //   }
+      //   100%{
+      //     transform: translateX(0);
+      //   }
+      // }
       .btn-shop-now {
         color: #1696e7 ;
         text-decoration: none;
