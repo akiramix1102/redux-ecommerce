@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import Slider from "react-slick";
 import { useSelector } from 'react-redux'
 import { Col, Row } from 'react-bootstrap';
@@ -9,7 +9,7 @@ import ModalView from '../../Modal/QuickView';
 
 function FeatureItem() {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         autoplay:true,
         autoplaySpeed: 3000,
@@ -25,7 +25,6 @@ function FeatureItem() {
             state.items.filter(item => item.feature === true)
         )
     })
-    console.log(listProducts);
     
     // render star rating
     const showRating = rating => {
@@ -55,16 +54,16 @@ function FeatureItem() {
                 </Col>
                 <Col md={8} className="feature-info">
                     <h3 className="heading-title">{product.title}</h3>
-                    <h4 className="price">
-                        &#36;{product.price}
-                        <del className="price__old">&#36;{product.oldprice}</del>
-                    </h4>
-                    <p className="des">{product.description}</p>
                     <ul className="rating">
                         <li>
                             {showRating(product.rating)}
                         </li>
                     </ul>
+                    <h4 className="price">
+                        &#36;{product.price}
+                        <del className="price__old">&#36;{product.oldprice}</del>
+                    </h4>
+                    <p className="des">{product.description}</p>
                     <div className="feature-action">
                         <a className="btn-buy">Add to cart</a>
                         <div className="feature-icon">

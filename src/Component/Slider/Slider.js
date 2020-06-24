@@ -7,8 +7,9 @@ function Slide() {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
-        arrows:false,
+        autoplay:true,
+        autoplaySpeed: 3000,
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1
     };

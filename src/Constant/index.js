@@ -5,6 +5,6 @@
 //     SUB_Q:'SUB_QUANTITY'
 // }
 
-// export const barseUrl='https://5ece614261c8480016701483.mockapi.io/store';
+export const barseUrl='https://5ece614261c8480016701483.mockapi.io/store';
 
-export const barseUrl='http://localhost:3001/store';
+// export const barseUrl='http://localhost:3001/store';
