@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Poppin";
-  src: local("Poppin"), url(./fonts/Poppins-Regular.ttf) format("opentype");
+  font-family: "Poppins";
+  src: local("Poppins"), url(./fonts/Poppins-Regular.ttf) format("opentype");
 }
 @font-face {
-  font-family: "Poppin-bold";
-  src: local("Poppin"), url(./fonts/Poppins-Bold.ttf) format("opentype");
+  font-family: "Poppins-bold";
+  src: local("Poppins"), url(./fonts/Poppins-Bold.ttf) format("opentype");
 }
 body {
-  font-family: Poppin !important;
+  font-family: Poppins !important;
 }
 // menu style
 .header {
@@ -20,7 +20,7 @@ body {
       .menu-item {
         color: #666666;
         font-size: 20px;
-        font-family: Poppin;
+        font-family: Poppins;
         font-weight: 600;
         margin: 0 20px;
         justify-content: center;
@@ -276,7 +276,6 @@ body {
     padding-bottom: 15px;
     animation: text-left 1s;
 
-    
     &-text {
       h1 {
         font-weight: 600;
@@ -294,7 +293,7 @@ body {
       //   }
       // }
       .btn-shop-now {
-        color: #1696e7 ;
+        color: #1696e7;
         text-decoration: none;
         padding: 10px 25px;
         background: #fff;
@@ -302,11 +301,11 @@ body {
         display: inline-block;
         font-weight: 600;
         transition: 0.3s;
-        &:hover{
+        &:hover {
           background-color: #fdba2d;
           color: #fff;
         }
-    }
+      }
     }
   }
 }
@@ -354,13 +353,13 @@ body {
 
   .wrapper-product {
     margin-top: 40px;
-    animation: aniScale 0.4s ;
+    animation: aniScale 0.4s;
 
     @keyframes aniScale {
-      from{
+      from {
         transform: scale(0.9);
       }
-      to{
+      to {
         transform: scale(1);
       }
     }
@@ -411,6 +410,7 @@ body {
         .price {
           color: #d10024;
           letter-spacing: 2px;
+          font-weight: bold;
           &__old {
             color: #ccc;
             margin-left: 10px;
@@ -461,5 +461,120 @@ body {
         }
       }
     }
+  }
+}
+
+//Deal
+.deal {
+  margin-top: 100px;
+  .slick-slider {
+    width: 100%;
+  }
+  &__heading {
+    padding-bottom: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    &-orange {
+      color: #fdba2d;
+    }
+    &-blue {
+      color: #337ab7;
+      font-weight: 700;
+    }
+  }
+  &__img {
+    padding-right: 0 !important;
+    img {
+      width: 475px;
+      height: 475px;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    padding: 75px 75px 50px 50px !important;
+    background-color: #337ab7;
+    &-title {
+      h3 {
+        color: #fff;
+        background: #15499f;
+        display: inline-block;
+        padding: 10px 25px;
+        font-weight: bold;
+        margin-left: -64px;
+        position: relative;
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: -10px;
+          left: 0px;
+          border-style: solid;
+          border-width: 0 0 10px 15px;
+          border-color: transparent transparent #15499f transparent;
+        }
+      }
+      p {
+        color: #d5d5d5;
+        line-height: 1.8;
+      }
+      .rating {
+        font-size: 16px;
+        & li * {
+          margin: 0 4px;
+        }
+        & li svg:first-child {
+          margin-left: 0;
+        }
+      }
+      .price-action {
+        display: flex;
+        align-items: center;
+        & li:first-child {
+          color: #fff;
+          font-size: 24px;
+          letter-spacing: 2px;
+        }
+        .btn-buy {
+          margin-left: 25px;
+          padding: 10px 25px;
+          background-color: #fff;
+          text-transform: uppercase;
+          color: #f83a3a;
+          font-weight: 600;
+        }
+      }
+      .time-count-deal {
+        display: flex;
+        margin-top: 30px;
+        .time-count {
+          text-align: center;
+          font-size: 24px;
+          text-transform: capitalize;
+          color: #fff;
+          font-weight: 400;
+          margin-top: 5px;
+          margin: 0 15px;
+          span{
+            display: block;
+            font-size: 14px;
+            text-transform: capitalize;
+            color: #fff;
+            font-weight: 400;
+            margin-top: 5px;
+          }
+          &:first-child{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .slick-next:before, .slick-prev:before{
+    font-size: 40px;
+    color: #337ab7 !important;
+  }
+  .slick-prev{
+      left: -55px;
   }
 }

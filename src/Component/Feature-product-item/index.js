@@ -60,8 +60,8 @@ function FeatureItem() {
                         </li>
                     </ul>
                     <h4 className="price">
-                        &#36;{product.price}
-                        <del className="price__old">&#36;{product.oldprice}</del>
+                        &#36;{product.price}.00
+                        <del className="price__old">&#36;{product.oldprice}.00</del>
                     </h4>
                     <p className="des">{product.description}</p>
                     <div className="feature-action">

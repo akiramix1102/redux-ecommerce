@@ -37,7 +37,7 @@ function Short() {
                 <Item number={numberShow} products={listProduct} productSelect={onSelectProduct}/>
             </Row>
             <div className="text-center show-more mt-4">
-                <Button variant="outline-warning" onClick={showMore}>
+                <Button variant="outline-warning" onClick={showMore} disabled={(numberShow===listProduct.length)}>
                     Show More
                 </Button>
             </div>

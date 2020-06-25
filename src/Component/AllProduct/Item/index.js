@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
+import {  Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
@@ -47,15 +47,14 @@ function index(props) {
                                                 </li>
                                             </ul>
                                             <h4 className="price">
-                                                &#36;{product.price}
-                                                <del className="price__old">&#36;{product.oldprice}</del>
+                                                &#36;{product.price}.00
+                                                <del className="price__old">&#36;{product.oldprice}.00</del>
                                             </h4>
                                         </div>
                                         <div className="wrapper-product__info-action">
                                             <a className="btn-buy">Add to cart</a>
                                             <div className="feature-icon">
-                                                <a onClick={() => showModalView(product)}
-                                                ><FontAwesomeIcon icon={faEye} /></a>
+                                                <a onClick={() => showModalView(product)}><FontAwesomeIcon icon={faEye} /></a>
                                                 <a><FontAwesomeIcon icon={faHeartReg} /></a>
                                             </div>
                                         </div>

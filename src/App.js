@@ -10,6 +10,7 @@ import Navbar from './Component/Navbar/Navbar';
 import { Route, Switch } from 'react-router-dom'
 import Home from './Component/Home/Home';
 import Product from './Component/Products/Products'
+
 function App() {
   const dispatch = useDispatch();
 

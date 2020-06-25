@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { Tabs, Tab, Container, Row, Col, Nav } from 'react-bootstrap'
+import { Tabs, Tab, Container, Row, Col } from 'react-bootstrap'
 import TShirt from './TShirt'
 import Jean from './Jean'
 import Short from './Short/Short';
