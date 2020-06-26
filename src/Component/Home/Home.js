@@ -5,6 +5,8 @@ import AllProduct from '../AllProduct'
 import BannerNewIn from '../Banner-Promotion/banner_new_in'
 import Deal from '../Deal';
 import Blog from '../Blog'
+import Subscribe from '../Subscribe'
+import Footer from '../Footer'
 function Home() {
 
     return (
@@ -15,6 +17,8 @@ function Home() {
             <AllProduct/>
             <Deal/>
             <Blog/>
+            <Subscribe/>
+            <Footer />
         </>
     );
 }
