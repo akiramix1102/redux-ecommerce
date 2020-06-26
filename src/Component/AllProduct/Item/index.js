@@ -52,7 +52,7 @@ function index(props) {
                                             </h4>
                                         </div>
                                         <div className="wrapper-product__info-action">
-                                            <a className="btn-buy">Add to cart</a>
+                                            <Link to={`/products/${product.id}/${product.title}`} className="btn-buy">Add to cart</Link>
                                             <div className="feature-icon">
                                                 <a onClick={() => showModalView(product)}><FontAwesomeIcon icon={faEye} /></a>
                                                 <a><FontAwesomeIcon icon={faHeartReg} /></a>

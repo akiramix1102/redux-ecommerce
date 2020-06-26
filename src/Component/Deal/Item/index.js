@@ -11,7 +11,7 @@ function Item() {
     const listProductsDeal = useSelector(state => state.items.filter(item => item.deal === true))
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         autoplay: false,
         autoplaySpeed: 3000,
