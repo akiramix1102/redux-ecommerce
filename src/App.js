@@ -10,6 +10,7 @@ import Navbar from './Component/Navbar/Navbar';
 import { Route, Switch } from 'react-router-dom'
 import Home from './Component/Home/Home';
 import Product from './Component/Products/Products'
+import Cart from './Component/Cart'
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/products/:id/:title" component={Product} />
+          <Route exact path="/cart" component={Cart} />
         </Switch>
       </div>
     </Router>

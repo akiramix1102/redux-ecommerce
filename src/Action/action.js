@@ -1,4 +1,4 @@
-import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,FETCH_API} from './action-types';
+import { ADD_TO_CART,ADD_TO_CART_WITH_OPTION,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,FETCH_API} from './action-types';
 
 
 //add cart action 
@@ -6,6 +6,16 @@ export const addToCart =id=>{
     return{
         type:ADD_TO_CART,
         id
+    }
+}
+
+//with option
+export const addToCartWithOption =(id,size,qty)=>{
+    return{
+        type:ADD_TO_CART_WITH_OPTION,
+        id,
+        size,
+        qty
     }
 }
 

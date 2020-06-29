@@ -1,11 +1,16 @@
-import React from 'react';
-import {  Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Col,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarReg, faHeart as faHeartReg } from '@fortawesome/free-regular-svg-icons'
+import { useDispatch } from 'react-redux';
 
-function index(props) {
+function Item(props) {
+
+    const dispatch=useDispatch();
+
+    // const [image,setImage]=useState('')
 
     const { number, products, productSelect } = props;
 
@@ -25,6 +30,18 @@ function index(props) {
         productSelect(product)
     }
 
+    const addToCart = id =>{
+        dispatch({
+            type:'ADD_TO_CART',
+            id
+        })
+    }
+
+    const onMouseOver = (e,product) => {
+// e.currentTarget.src=product.smallImg[0];
+
+
+    }
     return (
         <>
             {
@@ -34,7 +51,7 @@ function index(props) {
                             <Col md={4} className="text-center" key={product.id}>
                                 <div className="wrapper-product">
                                     <Link to="" className="wrapper-product__img">
-                                        <img src={product.images} alt={product.title} className="img-fluid" />
+                                        <img src={product.images} alt={product.title} className="img-fluid" onMouseOver={(e) => onMouseOver(e, product)} />
                                     </Link>
                                     <div className="wrapper-product__info">
                                         <div className="wrapper-product__info-text">
@@ -52,7 +69,7 @@ function index(props) {
                                             </h4>
                                         </div>
                                         <div className="wrapper-product__info-action">
-                                            <Link to={`/products/${product.id}/${product.title}`} className="btn-buy">Add to cart</Link>
+                                            <a className="btn-buy" onClick={()=>addToCart(product.id)}>Add to cart</a>
                                             <div className="feature-icon">
                                                 <a onClick={() => showModalView(product)}><FontAwesomeIcon icon={faEye} /></a>
                                                 <a><FontAwesomeIcon icon={faHeartReg} /></a>
@@ -68,4 +85,4 @@ function index(props) {
     );
 }
 
-export default index;
+export default Item;
