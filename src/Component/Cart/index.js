@@ -1,15 +1,30 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux'
+import { useSelector ,useDispatch} from 'react-redux'
+import {Link} from 'react-router-dom'
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import Banner from '../Banner-Promotion/banner_new_in'
 import Item from './Item'
+import Subcribe from '../Subscribe'
+import Footer from '../Footer'
 import cartStyles from './Cart.module.scss'
+import  './Cart.module.scss'
+import bag from '../../imgs/blue_shoppictbasket_1484336511-1.png'
+
 
 function Cart() {
+
+    const dispatch=useDispatch();
 
     const listProduct = useSelector(state => state.addItems);
     const total = useSelector(state => state.total)
     const [coupon, setCoupon] = useState('')
+
+    const handleClearCart=()=>{
+        dispatch({
+            type:'CLEAR_CART'
+        })
+    }
+
     return (
         <>
             <Banner />
@@ -48,7 +63,7 @@ function Cart() {
                                     </form>
                                 </Col>
                                 <Col md={3} className={cartStyles["clear"]}>
-                                    <button>Clear shopping cart</button>
+                                    <button onClick={handleClearCart}>Clear shopping cart</button>
                                 </Col>
                             </Row>
                             <Row className={cartStyles["total"]}>
@@ -66,9 +81,21 @@ function Cart() {
                         </Container>
                     ) :
                     (
-                        <h3>No thing</h3>
+                        <Container>
+                            <Row className="align-items-center">
+                                <Col md={5}>
+                                    <img src={bag} alt="bag empty" class="img-fluid"/>
+                                </Col>
+                                <Col md={7}>
+                                <h2 style={{color:"#666666"}}>Oop! Your bag is empty</h2>
+                                <Link to="/" class={cartStyles["backtohome"]}>Continue shopping</Link>
+                                </Col>
+                            </Row>
+                        </Container>
                     )
             }
+            <Subcribe/>
+            <Footer/>
         </>
     );
 }

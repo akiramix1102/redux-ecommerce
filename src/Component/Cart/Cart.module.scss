@@ -50,6 +50,7 @@
 .total{
     margin-top: 50px;
     justify-content: flex-end;
+    margin-bottom: 50px;
     h4{
         color: #3b3e79;
         font-weight: bold;
@@ -82,4 +83,23 @@
 
         }
     }
+}
+.backtohome{
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 25px;
+    background-color: #fdba2d;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    &:hover{
+        text-decoration: none;
+        background-color: #2B96CC;
+        color: #fff;
+    }
+}
+
+.new-in{
+    margin-top: 0;
 }

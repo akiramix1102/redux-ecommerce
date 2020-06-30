@@ -1,4 +1,4 @@
-import { ADD_TO_CART,ADD_TO_CART_WITH_OPTION,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,FETCH_API} from './action-types';
+import { ADD_TO_CART,ADD_TO_CART_WITH_OPTION,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,CLEAR_CART,FETCH_API} from './action-types';
 
 
 //add cart action 
@@ -39,6 +39,14 @@ export const subQuantity=(id)=>{
     return{
         type: SUB_QUANTITY,
         id
+    }
+}
+
+//Clear shopping cart
+export const clearCart=()=>{
+    return{
+        type: SUB_QUANTITY,
+        
     }
 }
 

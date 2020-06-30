@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import FeatureItem from '../Feature-product-item/index'
 function Feture() {
     return (
-        <section>
+        <section className="feature">
             <Container className="feature-products">
                 <Row>
                     <Col xs={12} className="feature-products__title text-center">

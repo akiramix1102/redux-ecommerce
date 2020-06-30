@@ -70,6 +70,8 @@ body {
   }
 }
 
+.feature{
+  padding-bottom: 50px;
 .feature-products {
   padding-top: 100px;
   &__title {
@@ -145,6 +147,7 @@ body {
       }
     }
   }
+}
 }
 
 // Modal Quick View
@@ -269,7 +272,6 @@ body {
   background-size: cover;
   padding: 100px 0;
   text-transform: uppercase;
-  margin-top: 50px;
   color: #fff;
   &__wrapper {
     overflow: hidden;
