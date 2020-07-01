@@ -9,6 +9,7 @@ import {createStore } from 'redux'
 import CartReducer from './Reducer/CartReducer';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"
+import "react-input-range/lib/css/index.css"
 
 const store =createStore(CartReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 

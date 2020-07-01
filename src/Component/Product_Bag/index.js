@@ -1,10 +1,9 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap'
-import Filter from './Filter/Filter'
-import Items from './Item/Items'
-import Slide from '../Slider/Slider'
+import Filter from '../Products/Filter/Filter'
+import Items from './Items/Items'
 import Banner from '../Banner-Promotion/banner_new_in'
-function Products() {
+function Bag() {
     return (
         <>
             <Banner />
@@ -21,4 +20,4 @@ function Products() {
     );
 }
 
-export default Products;
+export default Bag;

@@ -40,7 +40,6 @@ function Item(props) {
     const onMouseOver = (e,product) => {
 // e.currentTarget.src=product.smallImg[0];
 
-
     }
     return (
         <>

@@ -1,0 +1,28 @@
+.category{
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    h4{
+        padding-left: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #666;
+    }
+    ul{
+        list-style: none;
+        margin-bottom: 0;
+        li{
+            background-color: #1696e7;
+            padding: 10px 10px;
+            border-bottom: 1px solid #fff;
+            transition: 0.3s;
+            &:hover{
+                background-color: #fdba2d;
+                padding-left: 20px;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -5,6 +5,9 @@ import Jean from './Jean'
 import Short from './Short/Short';
 import Glass from './Glass/Glass';
 import Bag from './Bag/Bag'
+import Shirt from './Shirt'
+import Trouser from './Trousers'
+
 function index() {
     return (
         <>
@@ -23,12 +26,19 @@ function index() {
                                     <Tab eventKey="Short" title="Short" className="block-category">
                                         <Short />
                                     </Tab>
+                                    <Tab eventKey="Shirt" title="Shirt" className="block-category">
+                                        <Shirt/>
+                                    </Tab>
+                                    <Tab eventKey="Trouser" title="Trouser" className="block-category">
+                                        <Trouser/>
+                                    </Tab>
                                     <Tab eventKey="Glass" title="Glass" className="block-category">
                                         <Glass/>
                                     </Tab>
                                     <Tab eventKey="Bag" title="Bag" className="block-category">
                                         <Bag/>
                                     </Tab>
+
                                     <Tab href="/products" className="menu-item" eventKey="All" title="Show All Product">
 
                                     </Tab>

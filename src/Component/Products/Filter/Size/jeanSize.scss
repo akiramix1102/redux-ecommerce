@@ -1,0 +1,29 @@
+.jean-size {
+    margin-top: 25px;
+    h4 {
+        font-weight: 600;
+        letter-spacing: 2px;
+        padding-left: 10px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        .size-item {
+            width: calc(100% / 5 - 10px);
+            text-align: center;
+            height: 45px;
+            background: #fff;
+            line-height: 45px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .active{
+            background-color: #fdba2d;
+            color: #fff;
+        }
+    }
+}
+
