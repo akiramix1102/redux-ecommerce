@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slide from '../Slider/Slider';
 import Feature from '../Feature-product'
 import AllProduct from '../AllProduct'
@@ -8,7 +8,9 @@ import Blog from '../Blog'
 import Subscribe from '../Subscribe'
 import Footer from '../Footer'
 function Home() {
-
+    useEffect(()=>{
+        document.title="Home"
+    })
     return (
         <>
             <Slide />

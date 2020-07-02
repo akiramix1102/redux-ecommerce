@@ -11,11 +11,6 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './Component/Home/Home';
 import Products from './Component/Products/Products'
 import Cart from './Component/Cart'
-import TShirt from './Component/Product_TShirt'
-import Jean from './Component/Product_Jean'
-import Short from './Component/Product_Short'
-import Bag from './Component/Product_Bag'
-import Glass from './Component/Product_Glass'
 function App() {
   const dispatch = useDispatch();
 
@@ -37,12 +32,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/products" component={Products} />
-          <Route exact path="/products/:id/:title" component={Products} />
-          <Route exact path="/products/t-shirt" component={TShirt} />
-          <Route exact path="/products/jean" component={Jean} />
-          <Route exact path="/products/short" component={Short} />
-          <Route exact path="/products/glass" component={Glass} />
-          <Route exact path="/products/bag" component={Bag} />
+          <Route exact path="/products/category/:category/:title" component={Products} />
+          <Route exact path="/products/:item" component={Products} />
           <Route exact path="/cart" component={Cart} />
         </Switch>
       </div>

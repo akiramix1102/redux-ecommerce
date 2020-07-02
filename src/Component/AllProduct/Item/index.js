@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Col,Button } from 'react-bootstrap';
+import React from 'react';
+import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
@@ -49,7 +49,7 @@ function Item(props) {
                         return (
                             <Col md={4} className="text-center" key={product.id}>
                                 <div className="wrapper-product">
-                                    <Link to="" className="wrapper-product__img">
+                                    <Link to={`/products/category/${product.category}/${product.title}`} className="wrapper-product__img">
                                         <img src={product.images} alt={product.title} className="img-fluid" onMouseOver={(e) => onMouseOver(e, product)} />
                                     </Link>
                                     <div className="wrapper-product__info">

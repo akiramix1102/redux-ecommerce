@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarReg, faHeart as faHeartReg } from '@fortawesome/free-regular-svg-icons'
@@ -9,7 +9,18 @@ import Pagination from '../../Pagination'
 import './Item.scss'
 import Sort from './Sort';
 function Item() {
-    const listProducts = useSelector(state => state.items)
+
+    const {item}=useParams();
+
+    const listProducts = useSelector(state=>{
+            if(item){
+                return state.items.filter(product=>product.category===item)
+            }
+            return state.items
+    })
+
+    console.log(listProducts);
+    
 
     const [currentPage, setCurrentPage] = useState(1);
     const [productPerPage, setProductPerPage] = useState(9);
