@@ -16,8 +16,8 @@ function index() {
                     <Row>
                         <Col md={12}>
                             <div className="products-all__wrapper">
-                                <Tabs defaultActiveKey="TShirt" id="uncontrolled-tab-example" className="wrapper-left">
-                                    <Tab eventKey="TShirt" title="T Shirt" className="block-category">
+                                <Tabs defaultActiveKey="T-Shirt" id="uncontrolled-tab-example" className="wrapper-left">
+                                    <Tab eventKey="T-Shirt" title="T-Shirt" data-category="t-shirt" className="block-category">
                                         <TShirt />
                                     </Tab>
                                     <Tab eventKey="Jean" title="Jean" className="block-category">
@@ -39,7 +39,7 @@ function index() {
                                         <Bag/>
                                     </Tab>
 
-                                    <Tab href="/products" className="menu-item" eventKey="All" title="Show All Product">
+                                    <Tab href="/products"  className="menu-item" eventKey="All" title="Show All Product">
 
                                     </Tab>
                                 </Tabs>

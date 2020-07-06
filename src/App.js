@@ -11,6 +11,7 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './Component/Home/Home';
 import Products from './Component/Products/Products'
 import Cart from './Component/Cart'
+import ProductDetail from './Component/ProductDetail'
 function App() {
   const dispatch = useDispatch();
 
@@ -32,7 +33,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/products" component={Products} />
-          <Route exact path="/products/category/:category/:title" component={Products} />
+          <Route exact path="/products/:category/:id/:title" component={ProductDetail} />
           <Route exact path="/products/:item" component={Products} />
           <Route exact path="/cart" component={Cart} />
         </Switch>

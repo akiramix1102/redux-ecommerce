@@ -1,9 +1,9 @@
-import { ADD_TO_CART, ADD_TO_CART_WITH_OPTION, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, FETCH_API,CLEAR_CART } from '../Action/action-types';
+import { ADD_TO_CART, ADD_TO_CART_WITH_OPTION, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, SORT_PRICE_ASC, SORT_PRICE_DES, SORT_NAME_ASC, SORT_NAME_DES ,FETCH_API, CLEAR_CART } from '../Action/action-types';
 
 const initState = {
     items: [],
     addItems: [],
-    total: 0
+    total: 0,
 }
 
 const CartReducer = (state = initState, action) => {
@@ -12,7 +12,7 @@ const CartReducer = (state = initState, action) => {
         case FETCH_API:
             return {
                 ...state,
-                items: action.products
+                items: action.products,
             }
 
         case ADD_TO_CART:
@@ -76,21 +76,51 @@ const CartReducer = (state = initState, action) => {
                 }
             }
 
-            case ADD_QUANTITY:
-                const addQuantityItem = state.items.find(item => item.id === action.id);
-                addQuantityItem.quantity+=1;
-                let newTotal=state.total+addQuantityItem.price;
+        case ADD_QUANTITY:
+            const addQuantityItem = state.items.find(item => item.id === action.id);
+            addQuantityItem.quantity += 1;
+            let newTotal = state.total + addQuantityItem.price;
+            return {
+                ...state,
+                total: newTotal
+            }
+
+        case CLEAR_CART:
+            const newAddItems = [];
+            return {
+                ...state,
+                addItems: newAddItems
+            }
+
+        case SORT_PRICE_ASC:
+            let sortPriceAsc = state.items.sort((a, b) => a.price - b.price)
+            return {
+                ...state,
+                items: sortPriceAsc
+            }
+
+        case SORT_PRICE_DES:
+            let sortPriceDes = state.items.sort((a, b) => b.price - a.price)
+            return {
+                ...state,
+                items: sortPriceDes
+            }
+
+        case SORT_NAME_ASC:
+            let sortNameAsc=state.items.sort((a,b)=>a.title.localeCompare(b.title))          
+            return{
+                ...state,
+                items:sortNameAsc
+            }
+        
+        case SORT_NAME_DES:
+
+                let sortNameDes=state.items.sort((a,b)=>b.title.localeCompare(a.title))
                 return{
                     ...state,
-                    total:newTotal
+                    items:sortNameDes
                 }
 
-            case CLEAR_CART:
-                const newAddItems=[];
-                return{
-                    ...state,
-                    addItems:newAddItems
-                }
         default:
             return state
     }

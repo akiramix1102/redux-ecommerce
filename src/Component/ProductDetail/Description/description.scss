@@ -1,0 +1,45 @@
+.des {
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #eee;
+    .wrapper-left {
+        justify-content: center;
+        border-bottom: none;
+        margin-bottom: 25px;
+        a {
+            border: none;
+            color: #8a8a8a;
+            font-weight: 600;
+            position: relative;
+            margin: 0 10px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background: red;
+                transition: 0.3s;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+        }
+        a.active {
+            color: #d10024 !important;
+            z-index: 999;
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+    .tab-content{
+        p{
+            line-height: 2;
+            color: #8a8a8a;
+        }
+    }
+}

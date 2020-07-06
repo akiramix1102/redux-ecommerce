@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 
 function Item(props) {
 
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
 
     // const [image,setImage]=useState('')
 
@@ -30,17 +30,13 @@ function Item(props) {
         productSelect(product)
     }
 
-    const addToCart = id =>{
+    const addToCart = id => {
         dispatch({
-            type:'ADD_TO_CART',
+            type: 'ADD_TO_CART',
             id
         })
     }
 
-    const onMouseOver = (e,product) => {
-// e.currentTarget.src=product.smallImg[0];
-
-    }
     return (
         <>
             {
@@ -49,12 +45,12 @@ function Item(props) {
                         return (
                             <Col md={4} className="text-center" key={product.id}>
                                 <div className="wrapper-product">
-                                    <Link to={`/products/category/${product.category}/${product.title}`} className="wrapper-product__img">
-                                        <img src={product.images} alt={product.title} className="img-fluid" onMouseOver={(e) => onMouseOver(e, product)} />
+                                    <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="wrapper-product__img">
+                                        <img src={product.images} alt={product.title} className="img-fluid"  />
                                     </Link>
                                     <div className="wrapper-product__info">
                                         <div className="wrapper-product__info-text">
-                                            <Link to="" className="title">
+                                            <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="title">
                                                 {product.title}
                                             </Link>
                                             <ul className="rating">
@@ -68,7 +64,7 @@ function Item(props) {
                                             </h4>
                                         </div>
                                         <div className="wrapper-product__info-action">
-                                            <a className="btn-buy" onClick={()=>addToCart(product.id)}>Add to cart</a>
+                                            <a className="btn-buy" onClick={() => addToCart(product.id)}>Add to cart</a>
                                             <div className="feature-icon">
                                                 <a onClick={() => showModalView(product)}><FontAwesomeIcon icon={faEye} /></a>
                                                 <a><FontAwesomeIcon icon={faHeartReg} /></a>

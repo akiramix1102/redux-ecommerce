@@ -1,4 +1,4 @@
-import { ADD_TO_CART,ADD_TO_CART_WITH_OPTION,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,CLEAR_CART,FETCH_API} from './action-types';
+import { ADD_TO_CART,ADD_TO_CART_WITH_OPTION,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,CLEAR_CART,SORT_NAME_ASC,SORT_PRICE_ASC,SORT_NAME_DES,SORT_PRICE_DES,FETCH_API} from './action-types';
 
 
 //add cart action 
@@ -45,7 +45,41 @@ export const subQuantity=(id)=>{
 //Clear shopping cart
 export const clearCart=()=>{
     return{
-        type: SUB_QUANTITY,
+        type: CLEAR_CART,
+        
+    }
+}
+
+//SORT
+export const sortPriceAsc=(value,item)=>{
+    return{
+        type: SORT_PRICE_ASC,
+        value,
+        item
+        
+    }
+}
+export const sortPriceDes=(value,item)=>{
+    return{
+        type: SORT_PRICE_DES,
+        value,
+        item
+        
+    }
+}
+export const sortNameAsc=(value,item)=>{
+    return{
+        type: SORT_NAME_ASC,
+        value,
+        item
+        
+    }
+}
+export const sortNameDes=(value,item)=>{
+    return{
+        type: SORT_NAME_DES,
+        value,
+        item
         
     }
 }

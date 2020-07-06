@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
+import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux'
 import { Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +9,9 @@ import { faStar as faStarReg, faHeart as faHeartReg } from '@fortawesome/free-re
 import ModalView from '../../Modal/QuickView';
 
 function FeatureItem() {
+
+    const dispatch = useDispatch();
+
     const settings = {
         dots: false,
         infinite: true,
@@ -45,6 +49,14 @@ function FeatureItem() {
     const onHide =()=>{
         setShow(!show)
     }
+
+    const addToCart = id => {
+        dispatch({
+            type: 'ADD_TO_CART',
+            id
+        })
+    }
+
     const listItems = listProducts.map(product => {
         return (
 
@@ -65,7 +77,7 @@ function FeatureItem() {
                     </h4>
                     <p className="des">{product.description}</p>
                     <div className="feature-action">
-                        <a className="btn-buy">Add to cart</a>
+                    <a className="btn-buy" onClick={() => addToCart(product.id)}>Add to cart</a>
                         <div className="feature-icon">
                             <a onClick={() => showModalView(product)}><FontAwesomeIcon icon={faEye} /></a>
                             <a><FontAwesomeIcon icon={faHeartReg} /></a>

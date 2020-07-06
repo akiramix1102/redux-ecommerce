@@ -1,15 +1,11 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Item from './Item'
-import Sort from './Sort';
-function Items() {
+function Items({Min,Max}) {
     return (
         <Col md={9} className="wrapper-products">
             <Row>
-                <Sort/>
-            </Row>
-            <Row>
-                <Item/>
+                <Item Min={Min} Max={Max}/>
             </Row>
         </Col>
     );

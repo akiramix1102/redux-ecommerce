@@ -14,7 +14,9 @@ class Price extends Component {
         };
     }
     render() {
-
+        const {getData}=this.props;
+        const {min,max}=this.state.value;
+        
         const handChangeMin = e => {
             this.setState({
                 value: {
@@ -32,12 +34,16 @@ class Price extends Component {
                     max: e.target.value
                 }
             })
+        }
 
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            getData(min,max)
         }
         return (
             <div className={priceStyles["price-range"]}>
                 <h4>Price</h4>
-                <form className={priceStyles["form"]}>
+                <form className={priceStyles["form"]} onSubmit={e=>handleSubmit(e)}>
                     <InputRange
                         maxValue={200}
                         minValue={0}

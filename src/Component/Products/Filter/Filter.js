@@ -6,13 +6,16 @@ import JeanSize from './Size/Jean_Size';
 import Color from './Color/Color';
 import Price from './Price/Price';
 
-function Filter() {
+function Filter({min_max}) {
+    const onGetData = (a, b) => {
+        min_max(a,b)
+    }
     return (
         <Col lg={3} className="filter">
 
             <Category />
 
-            <Price />
+            <Price getData={onGetData} />
 
             <ShirtSize />
 

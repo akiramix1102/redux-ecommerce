@@ -1,29 +1,16 @@
-.form {
-    margin-bottom: 20px;
-    display: flex;
-    .form__sort,
-    .form__show {
-        display: flex;
-        align-items: center;
-        .form-label {
-            margin-bottom: 0;
-            width: 100px;
-        }
-        .form-control:focus{
-            outline: none;
-            box-shadow: none;
+.raleted {
+    margin-top: 50px;
+    .heading {
+        margin-bottom: 25px;
+        font-size: 1.5rem;
+        color: #fdba2d;
+        span {
+            color: #337ab7;
+            font-weight: 700;
         }
     }
-    .form__sort {
-        margin-right: 20px;
-    }
-}
-
-
-.all-products {
-    padding-top: 50px;
     .wrapper-product {
-        margin-bottom: 40px;
+        margin-top: 40px;
         animation: aniScale 0.4s;
 
         @keyframes aniScale {
@@ -53,7 +40,7 @@
                 transition: all 0.2s;
                 padding-top: 20px;
                 .title {
-                    font-size: 16px;
+                    font-size: 20px;
                     text-decoration: none;
                     color: #555555;
                     position: relative;
@@ -65,24 +52,24 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        width: 10px;
+                        width: 30px;
                         height: 1px;
                         background-color: rgba(26, 23, 23, 0.5);
                         top: 50%;
                         transform: translateY(-50%);
                     }
                     &::before {
-                        left: -20px;
+                        left: -40px;
                     }
                     &::after {
-                        right: -20px;
+                        right: -40px;
                     }
                 }
                 .price {
                     color: #d10024;
                     letter-spacing: 2px;
-                    font-weight: bold;
                     font-size: 16px;
+                    font-weight: bold;
                     &__old {
                         color: #ccc;
                         margin-left: 10px;
@@ -99,7 +86,7 @@
                 top: 40px;
                 transition: all 0.4s ease 0s;
                 .btn-buy {
-                    padding: 10px 20px;
+                    padding: 10px 25px;
                     background: #337ab7;
                     color: #fff;
                     text-transform: uppercase;
@@ -107,7 +94,6 @@
                     transition: 0.3s;
                     &:hover {
                         background-color: #fdba2d;
-                        color: #fff;
                     }
                 }
                 .feature-icon {

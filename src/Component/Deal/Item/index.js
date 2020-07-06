@@ -35,7 +35,11 @@ function Item() {
     }
 
     const calculateTimeLeft = () => {
-        const difference = +new Date("2020-06-26") - +new Date();
+
+        const date=+new Date();
+        const difference = +new Date("2020-07-14") - date;
+
+       
         let timeLeft = {};
 
         if (difference > 0) {
@@ -45,6 +49,9 @@ function Item() {
                 minutes: Math.floor((difference / 1000 / 60) % 60),
                 seconds: Math.floor((difference / 1000) % 60)
             };
+        }
+        else{
+            
         }
 
         return timeLeft;

@@ -1,25 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarReg, faHeart as faHeartReg } from '@fortawesome/free-regular-svg-icons'
-import { Col } from 'react-bootstrap'
+import { Col, Form } from 'react-bootstrap'
 import Pagination from '../../Pagination'
 import './Item.scss'
-import Sort from './Sort';
-function Item() {
+function Item({ Min, Max }) {
 
-    const {item}=useParams();
+    const { item } = useParams();
 
-    const listProducts = useSelector(state=>{
-            if(item){
-                return state.items.filter(product=>product.category===item)
-            }
-            return state.items
+    const [min,setMin]=useState(Min)
+    const [max,setMax]=useState(Max)
+
+    useEffect(()=>{
+        setMin(Min)
+        setMax(Max)
+    },[Min,Max])
+    
+
+    let listProducts = useSelector(state => {
+        if (item) {
+            return state.items.filter(product => product.category === item);
+        }
+        return state.items
     })
 
-    console.log(listProducts);
+
     
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -37,6 +45,7 @@ function Item() {
         indexOfFirstProduct,
         indexOfLastProduct
     );
+
 
     const dispatch = useDispatch();
 
@@ -66,9 +75,56 @@ function Item() {
 
     }
 
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+        if (value === "2") {
+            dispatch({
+                type: "SORT_PRICE_ASC",
+                item
+            })
+        }
+        else if (value === "-2") {
+            dispatch({
+                type: "SORT_PRICE_DES",
+                item
+            })
+        }
+        else if (value === "1") {
+            dispatch({
+                type: "SORT_NAME_ASC",
+                item
+            })
+        }
+        else if (value === "-1") {
+            dispatch({
+                type: "SORT_NAME_DES",
+                item
+            })
+        }
+
+    }
+
+
+
+
     return (
         <>
-            
+            <Col md={12}>
+                <Form className="form" >
+                    <Form.Group className="form__sort">
+                        <Form.Label>Sort By</Form.Label>
+                        <Form.Control as="select" onChange={e => handleChange(e)}>
+                            <option value="1" >Name A - Z</option>
+                            <option value="-1">Name Z - A</option>
+                            <option value="2">Price Low - High</option>
+                            <option value="-2">Price High - Low</option>
+                        </Form.Control>
+                    </Form.Group>
+                </Form>
+            </Col>
+
+
             {currentProduct.map(product => {
                 return (
                     <Col md={4} className="text-center" key={product.id}>
