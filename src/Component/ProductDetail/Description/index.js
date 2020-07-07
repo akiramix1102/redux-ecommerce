@@ -5,7 +5,7 @@ import Detail from './Detail'
 import './description.scss'
 function index(props) {
     return (
-        <Col lg={12} className="des" >
+        <Col lg={12} className="description" >
             <Tabs defaultActiveKey="des" id="uncontrolled-tab-example" className="wrapper-left">
                 <Tab eventKey="des" title="Description" className="des__item">
                     <Description />

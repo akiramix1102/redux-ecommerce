@@ -12,6 +12,7 @@ import Home from './Component/Home/Home';
 import Products from './Component/Products/Products'
 import Cart from './Component/Cart'
 import ProductDetail from './Component/ProductDetail'
+import About from './Component/About'
 function App() {
   const dispatch = useDispatch();
 
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/products/:category/:id/:title" component={ProductDetail} />
           <Route exact path="/products/:item" component={Products} />
           <Route exact path="/cart" component={Cart} />
+          <Route exact path="/about" component={About} />
         </Switch>
       </div>
     </Router>

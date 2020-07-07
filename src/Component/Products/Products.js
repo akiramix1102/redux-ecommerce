@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap'
 import Filter from './Filter/Filter'
 import Items from './Item/Items'
 import Banner from '../Banner-Promotion/banner_new_in'
+import Footer from '../Footer'
 function Products() {
 
     const [min, setMin] = useState(0)
@@ -23,7 +24,7 @@ function Products() {
                     </Row>
                 </Container>
             </section>
-
+            <Footer/>
         </>
     );
 }

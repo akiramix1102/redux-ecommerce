@@ -1,49 +1,53 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faTelegram,faGoogle,faTwitter,faInstagram } from '@fortawesome/free-brands-svg-icons'
-
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import logo from "../../imgs/logo2.png";
+import payment from '../../imgs/footer/1.png'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faPhoneVolume,faEnvelope,faLocationArrow} from '@fortawesome/free-solid-svg-icons'
+import './footer.scss'
 function index() {
     return (
         <section className="footer">
             <Container>
                 <Row>
-                    <Col md={4} className="footer__location">
-                        <h4 className="footer__location-title text-center">
-                            LOCATION
-                            </h4>
-                        <span>20 Dương Quảng Hàm – Cầu Giấy – Hà Nội</span>
-                        <span>242 Thái Hà – Đống Đa – Hà Nội</span>
-                        <span>63 Đại Cổ Việt – Hai Bà Trưng – Hà Nội</span>
-                        <span>16 Kim Mã – Ba Đình – Hà Nội</span>
+                    <Col lg={4} md={6}>
+                        <img src={logo} alt="logo" className="img-fluid mb-3" />
+                        <p className="footer__text">
+                            Nam liber tempor cum soluta nobis eleif- end option congue nihil
+                            impdiet doming id quod mazim placerat
+            </p>
                     </Col>
-                    <Col md={4} className="footer__social">
-                        <h4 className="footer__social-title text-center">
-                            CONNECT WITH US
-                        </h4>
-                        <Link to="">
-                            <FontAwesomeIcon icon={faFacebook} />
-                        </Link>
-                        <Link to="">
-                            <FontAwesomeIcon icon={faTelegram} />
-                        </Link>
-                        <Link to="">
-                            <FontAwesomeIcon icon={faTwitter} />
-                        </Link>
-                        <Link to="">
-                            <FontAwesomeIcon icon={faGoogle} />
-                        </Link>
-                        <Link to="">
-                            <FontAwesomeIcon icon={faInstagram} />
-                        </Link>
+                    <Col lg={2} md={6}>
+                        <h4 className="footer__title">Information</h4>
+                        <ul className="footer__menu">
+                            <li>My Acount</li>
+                            <li>Order History</li>
+                            <li>Wish List</li>
+                            <li>Newsletter</li>
+                            <li>Privacy Policy</li>
+                            <li>Delivery Info</li>
+                        </ul>
                     </Col>
-                    <Col md={4} className="footer__contact ">
-                        <h4 className="footer__contact-title text-center">
-                            CONTACT
-                        </h4>
-                        <span>Hotline: 0973 285 886</span>
-                        <span>Email:hatdajay.support@gmail.com</span>
+                    <Col lg={3} md={6}>
+                        <h4 className="footer__title">Information</h4>
+                        <ul className="footer__menu">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Product</li>
+                            <li>Wish List</li>
+                            <li>Check Out</li>
+                            <li>Cart</li>
+                        </ul>
+                    </Col>
+                    <Col lg={3}md={6}>
+                        <h4 className="footer__title">Payment Type</h4>
+                        <img src={payment} alt="payment" className="img-fluid mb-3"/>
+                        <h4 className="footer__title">Contact Us </h4>
+                        <ul className="footer__menu-last">
+                            <li><FontAwesomeIcon icon={faPhoneVolume}/>+003 (1234) 7894</li>
+                            <li><FontAwesomeIcon icon={faEnvelope}/>youremail@gmail.com</li>
+                            <li><FontAwesomeIcon icon={faLocationArrow}/>New Market , London</li>
+                        </ul>
                     </Col>
                 </Row>
             </Container>
