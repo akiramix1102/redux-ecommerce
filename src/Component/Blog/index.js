@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faComment } from "@fortawesome/free-solid-svg-icons";
 import img_blog_1 from '../../imgs/blog/blog2.jpeg'
+import './blog.scss'
 function index() {
     return (
         <section className="blog">
