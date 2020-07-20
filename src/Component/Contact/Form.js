@@ -11,11 +11,16 @@ function FormControl(props) {
         Object: '',
         Message: ''
     };
-    const validationSchema=Yup.object().shape({
-        Name:Yup.string().required('This field is required.'),
-        Email: Yup.string().required('This field is required.'),
-        Object:Yup.string().required('This field is required.'),
-        Message:Yup.string().required('This field is required.')
+    const validationSchema = Yup.object().shape({
+        Name: Yup.string()
+            .required('This field is required.'),
+
+        Email: Yup.string()
+            .email("Invalid email format")
+            .required("Required!"),
+            
+        Object: Yup.string().required('This field is required.'),
+        Message: Yup.string().required('This field is required.')
     })
     return (
 
@@ -25,8 +30,6 @@ function FormControl(props) {
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
-                    onSubmit={values=>console.log('submit',values)}
-                    
                 >
                     {formikProps => {
                         const { values, errors, touched } = formikProps;

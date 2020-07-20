@@ -1,0 +1,45 @@
+.modal-header{
+    padding-top: 5px !important;
+    border: none !important;
+    padding-bottom: 0 !important;
+}
+
+.login {
+    padding-bottom: 30px !important;
+    &__icon {
+        font-size: 100px;
+        svg{
+           color: #337ab7;
+        }
+    }
+    &__heading{
+        h3{
+            font-size: 36px;
+            font-weight: bold;
+        }
+    }
+    &__form{
+        margin-top: 25px;
+
+        input{
+            outline: none;
+            &:focus{
+                box-shadow: none !important;
+                outline: none !important;
+            }
+        }
+        button{
+            display: block;
+            outline: none;
+            width: 100%;
+        }
+        span{
+            text-align: center;
+            display: block;
+            margin: 10px 0;
+        }
+        .sign-in{
+            background-color: #337ab7;
+        }
+    }
+}

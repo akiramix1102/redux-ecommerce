@@ -7,6 +7,8 @@ import Glass from './Glass/Glass';
 import Bag from './Bag/Bag'
 import Shirt from './Shirt'
 import Trouser from './Trousers'
+import { Link } from 'react-router-dom';
+import Product from '../Products/Products'
 
 function index() {
     return (
@@ -39,8 +41,8 @@ function index() {
                                         <Bag/>
                                     </Tab>
 
-                                    <Tab href="/products"  className="menu-item" eventKey="All" title="Show All Product">
-
+                                    <Tab  className="menu-item" eventKey="All" title="Show All Product">
+                                        <Link to="/products" />
                                     </Tab>
                                 </Tabs>
 
