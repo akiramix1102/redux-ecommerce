@@ -1,13 +1,19 @@
 import React from 'react';
-import { Modal,Button,Form, Col } from 'react-bootstrap';
+import { Modal, Button, Form, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import './login.scss'
 import { useState } from 'react';
-function Login({ show, hide,showForm }) {
+import firebase from '../../firebase'
+import { useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
+
+function Login({ show, hide, showForm }) {
+
+    const history = useHistory();
 
     const [email, setEmail] = useState('')
-    const [passWord, setPassWord] =useState ('')
+    const [passWord, setPassWord] = useState('')
 
     const onHideModal = () => {
         hide();
@@ -15,8 +21,18 @@ function Login({ show, hide,showForm }) {
     const onSubmit = e => {
         e.preventDefault();
     }
-    const onShowForm=()=>{
+    const onShowForm = () => {
         showForm();
+    }
+
+    const signIn = () => {
+        try {
+            firebase.login(email, passWord)
+            // localStorage.setItem('name',JSON.stringify(firebase.getCurrentUsername()))
+            history.push('/')
+        } catch (error) {
+            alert(error.message)
+        }
     }
 
     return (
@@ -35,7 +51,7 @@ function Login({ show, hide,showForm }) {
                     <Form onSubmit={e => onSubmit(e)} className="login__form">
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="Enter email" />
+                            <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter email" />
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
                             </Form.Text>
@@ -43,12 +59,12 @@ function Login({ show, hide,showForm }) {
 
                         <Form.Group controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" value={passWord} onChange={e=>setPassWord(e.target.value)} placeholder="Password" />
+                            <Form.Control type="password" value={passWord} onChange={e => setPassWord(e.target.value)} placeholder="Password" />
                         </Form.Group>
                         <Form.Group controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Remember Me" />
                         </Form.Group>
-                        <Button type="submit" className="sign-in">
+                        <Button type="submit" className="sign-in" onClick={signIn}>
                             Sign In
                         </Button>
                         <span>Or</span>

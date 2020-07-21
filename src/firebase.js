@@ -1,26 +1,32 @@
-import app from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/firebase-firestore'
+import firebase from 'firebase'
+// If you enabled Analytics in your project, add the Firebase SDK for Analytics
+import "firebase/analytics";
 
-var config = {
-    apiKey: "AIzaSyA_gTMxKqD0gwP-WBulYHlniJIZpdi_FhI",
-    authDomain: "ecommerce-hat.firebaseapp.com",
-    databaseURL: "https://ecommerce-hat.firebaseio.com",
-    projectId: "ecommerce-hat",
-    storageBucket: "ecommerce-hat.appspot.com",
-    messagingSenderId: "493924374663",
-    appId: "1:493924374663:web:8c67895b832a593a734022",
-    measurementId: "G-5CN7B7Z4HD"
+// Add the Firebase products that you want to use
+import "firebase/auth";
+import "firebase/firestore";
+
+const config= {
+    apiKey: "AIzaSyBuU8JAMt5D_z4XmnRqTW26F29dtjvqJr8",
+    authDomain: "ecommerce-nqd.firebaseapp.com",
+    databaseURL: "https://ecommerce-nqd.firebaseio.com",
+    projectId: "ecommerce-nqd",
+    storageBucket: "ecommerce-nqd.appspot.com",
+    messagingSenderId: "532191588614",
+    appId: "1:532191588614:web:1a477803620e5c2f386e87",
+    measurementId: "G-6VXQY4DGE3"
 };
 // Initialize Firebase
-app.initializeApp(config);
-app.analytics();
+
+if (firebase.apps.length) {
+    firebase.initializeApp(config);
+}
 
 class Firebase {
     constructor() {
-        app.initializeApp(config)
-        this.auth = app.auth()
-        this.db = app.firestore()
+        firebase.initializeApp(config)
+        this.auth = firebase.auth()
+        this.db = firebase.firestore()
     }
 
     login(email, password) {
@@ -36,19 +42,13 @@ class Firebase {
         return this.auth.currentUser.updateProfile({
             displayName: name
         })
+        
     }
-
-
-    isInitialized() {
-        return new Promise(resolve => {
-            this.auth.onAuthStateChanged(resolve)
-        })
-    }
-
+    
     getCurrentUsername() {
         return this.auth.currentUser && this.auth.currentUser.displayName
     }
 
 }
 
-export default new Firebase()
+export default new Firebase();

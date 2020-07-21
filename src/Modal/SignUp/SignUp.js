@@ -1,13 +1,16 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Modal, Button, Form, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import firebase from '../../firebase'
-function SignUp({ show, hide ,showForm}) {
+import { useHistory } from 'react-router-dom';
+function SignUp({ show, hide, showForm }) {
+
+  
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [passWord, setPassWord] =useState ('')
+    const [passWord, setPassWord] = useState('')
 
     const onHideModal = () => {
         hide();
@@ -16,9 +19,19 @@ function SignUp({ show, hide ,showForm}) {
     const onSubmit = e => {
         e.preventDefault();
     }
-    const onShowForm=()=>{
+    const onShowForm = () => {
         showForm();
     }
+
+    const signUp = () => {
+        try {
+            firebase.register(name, email, passWord)
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+   
+    
     return (
         <>
             <Modal show={show}
@@ -33,11 +46,11 @@ function SignUp({ show, hide ,showForm}) {
                     <Col xs={12} className="text-center login__heading">
                         <h3>Sign Up</h3></Col>
                     <Form onSubmit={e => onSubmit(e)} className="login__form">
-                    <Form.Group controlId="formBasicEmail">
+                        <Form.Group >
                             <Form.Label>Name</Form.Label>
                             <Form.Control type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Enter email" />
                         </Form.Group>
-                        <Form.Group controlId="formBasicEmail">
+                        <Form.Group >
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter email" />
                             <Form.Text className="text-muted">
@@ -55,7 +68,7 @@ function SignUp({ show, hide ,showForm}) {
                             Sign Up
                         </Button>
                         <span>Or</span>
-                        <Button className="sign-in"  onClick={onShowForm}>
+                        <Button className="sign-in" onClick={onShowForm}>
                             Sign In
                         </Button>
                     </Form>
@@ -64,13 +77,6 @@ function SignUp({ show, hide ,showForm}) {
         </>
     );
 
-    async function signUp() {
-		try {
-			await firebase.register(name, email, passWord)
-		} catch(error) {
-			alert(error.message)
-		}
-	}
 }
 
 export default SignUp;
