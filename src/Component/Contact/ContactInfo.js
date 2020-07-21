@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPhoneVolume,faEnvelope,faLocationArrow} from '@fortawesome/free-solid-svg-icons'
-import './contact.scss'
+
 
 function ContactInfo(props) {
     return (

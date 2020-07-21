@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Subscribe from '../Subscribe'
 import Footer from '../Footer'
-import './about.scss'
+
 function index() {
     return (
         <>

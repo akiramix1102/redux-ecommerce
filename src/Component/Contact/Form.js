@@ -3,7 +3,7 @@ import { Button, FormGroup, Col } from 'react-bootstrap'
 import { Formik, Form, FastField } from 'formik'
 import * as Yup from 'yup'
 import InputField from './InputField'
-import './contact.scss'
+
 function FormControl(props) {
     const initialValues = {
         Name: '',

@@ -1,0 +1,44 @@
+.new-in {
+    background-image: url(../../imgs/bg/1.jpeg);
+    background-size: cover;
+    padding: 100px 0;
+    text-transform: uppercase;
+    color: #fff;
+    &__wrapper {
+      overflow: hidden;
+      padding-bottom: 15px;
+      animation: text-left 1s;
+  
+      &-text {
+        h1 {
+          font-weight: 600;
+          letter-spacing: 3px;
+          font-size: 50px;
+          margin-bottom: 25px;
+          // animation: text-left 1s;
+        }
+        // @keyframes text-left {
+        //   0%{
+        //     transform: translateX(-396px);
+        //   }
+        //   100%{
+        //     transform: translateX(0);
+        //   }
+        // }
+        .btn-shop-now {
+          color: #1696e7;
+          text-decoration: none;
+          padding: 10px 25px;
+          background: #fff;
+          margin-top: 25px;
+          display: inline-block;
+          font-weight: 600;
+          transition: 0.3s;
+          &:hover {
+            background-color: #fdba2d;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }

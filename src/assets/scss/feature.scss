@@ -1,0 +1,89 @@
+.feature {
+    padding-bottom: 50px;
+    .feature-products {
+      padding-top: 100px;
+      &__title {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 50px;
+        .title-orange {
+          color: #fdba2d;
+        }
+        .title-blue {
+          color: #337ab7;
+          font-weight: 700;
+        }
+      }
+      .feature-products__wrapper {
+        display: flex !important;
+        align-items: center;
+        .feature-info {
+          padding-left: 50px;
+          .heading-title {
+            color: #444444;
+            margin-bottom: 20px;
+          }
+          .price {
+            color: #d10024;
+            letter-spacing: 2px;
+            &__old {
+              color: #ccc;
+              margin-left: 10px;
+            }
+          }
+  
+          .des {
+            color: #8a8a8a;
+          }
+          .rating {
+            font-size: 20px;
+            & li * {
+              margin: 0 4px;
+            }
+            & li svg:first-child {
+              margin-left: 0;
+            }
+          }
+          .feature-action {
+            display: flex;
+            .btn-buy {
+              padding: 10px 25px;
+              background: #1696e7;
+              color: #fff !important;
+              text-transform: uppercase;
+              font-size: 14px; 
+              cursor: pointer;
+              transition: 0.3s;
+              &:hover{
+                background-color: #fdba2d;
+              }
+            }
+            .feature-icon {
+              margin-left: 30px;
+              display: flex;
+              align-items: center;
+              & a {
+                background: #c1c1c1;
+                width: 40px;
+                text-align: center;
+                height: 40px;
+                line-height: 40px;
+                margin-right: 20px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                  background-color: #337ab7;
+                  color: #fff;
+                }
+              }
+              & a:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

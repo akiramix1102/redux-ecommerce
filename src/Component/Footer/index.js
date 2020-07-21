@@ -4,7 +4,7 @@ import logo from "../../imgs/logo2.png";
 import payment from '../../imgs/footer/1.png'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPhoneVolume,faEnvelope,faLocationArrow} from '@fortawesome/free-solid-svg-icons'
-import './footer.scss'
+
 function index() {
     return (
         <section className="footer">

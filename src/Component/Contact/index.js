@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Form from "./Form";
 import ContactInfo from "./ContactInfo";
 import Footer from '../Footer'
-import "./contact.scss";
+
 function index(props) {
     return (
         <>

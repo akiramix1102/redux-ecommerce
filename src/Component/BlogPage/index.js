@@ -9,7 +9,6 @@ import img_blog_2 from '../../imgs/blog/blog1.jpeg'
 import img_blog_3 from '../../imgs/blog/blog3.jpeg'
 import Banner from '../Banner-Promotion/banner_new_in'
 import Footer from '../Footer'
-import './blogpage.scss'
 function index() {
     return (
         <>

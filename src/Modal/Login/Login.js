@@ -2,7 +2,6 @@ import React from 'react';
 import { Modal, Button, Form, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
-import './login.scss'
 import { useState } from 'react';
 import firebase from '../../firebase'
 import { useHistory } from 'react-router-dom';

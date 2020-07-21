@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faArrowCircleUp} from '@fortawesome/free-solid-svg-icons'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { fetchApi } from './Action/action'
@@ -17,6 +19,7 @@ import Blog from './Component/BlogPage'
 import Contact from './Component/Contact'
 import WishList from './Component/WishList/WishList';
 import CheckOut from './Component/CheckOut'
+import ScrollToTop from 'react-scroll-up'
 function App() {
   const dispatch = useDispatch();
 
@@ -27,6 +30,7 @@ function App() {
   }, [dispatch])
 
   return (
+
     <Router>
       <div className="wrap-all">
         <section className="header">
@@ -34,7 +38,7 @@ function App() {
             <Navbar />
           </Container>
         </section>
-
+  
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/products" component={Products} />
@@ -45,8 +49,16 @@ function App() {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/wishlist" component={WishList} />
-          <Route  path="/checkout" component={CheckOut} />
+          <Route path="/checkout" component={CheckOut} />
         </Switch>
+
+        <ScrollToTop showUnder={200}
+                    easing="linear"
+                    duration={350}
+        >
+          <FontAwesomeIcon icon={faArrowCircleUp} style={{fontSize:'32px'}}/>
+        </ScrollToTop>
+
       </div>
     </Router>
 

@@ -7,7 +7,6 @@ import { faShoppingCart, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../imgs/logo2.png'
 import { useSelector } from 'react-redux';
-import './navbar.scss'
 import Login from '../../Modal/Login/Login';
 import SignUp from '../../Modal/SignUp/SignUp';
 import firebase from '../../firebase'
@@ -17,10 +16,13 @@ function Navbar1() {
     const [showFormSignUp, setShowFormSignUp] = useState(false)
     // const [name, setName] = useState('')
     const addItems = useSelector(state => state.addItems)
+    const wishList =useSelector(state=>state.wishList.length)
 
     const numberQuantity = useSelector(state => state.addItems.reduce((acc, cur) => {
         return acc + cur.quantity
     }, 0))
+
+  console.log(wishList);
 
     const onShowFormSignIn = () => {
         setShowFormSignIn(!showFormSignIn)
@@ -95,6 +97,7 @@ function Navbar1() {
 
                             <li className="menu-right__item">
                                 <Link to="/wishlist"><FontAwesomeIcon icon={faHeart} /></Link>
+                                <span className={wishList ? 'number-quantity' : 'hide'}>{wishList ? wishList : ''}</span>
                             </li>
 
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { Col,Tab,Tabs } from 'react-bootstrap';
 import Description from './Description'
 import Detail from './Detail'
-import './description.scss'
 function index(props) {
     return (
         <Col lg={12} className="description" >
