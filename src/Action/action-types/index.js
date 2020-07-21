@@ -9,3 +9,4 @@ export const SORT_PRICE_DES= 'SORT_PRICE_DES';
 export const SORT_NAME_ASC= 'SORT_NAME_ASC';
 export const SORT_NAME_DES= 'SORT_NAME_DES';
 export const FETCH_API= 'FETCH_API';
+export const ADD_TO_WISH_LIST='ADD_TO_WISH_LIST';

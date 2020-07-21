@@ -57,6 +57,13 @@ function FeatureItem() {
         })
     }
 
+    const addToWishlist=id=>{
+        dispatch({
+            type:'ADD_TO_WISH_LIST',
+            id
+        })
+    }
+
     const listItems = listProducts.map(product => {
         return (
 
@@ -80,7 +87,7 @@ function FeatureItem() {
                     <a className="btn-buy" onClick={() => addToCart(product.id)}>Add to cart</a>
                         <div className="feature-icon">
                             <a onClick={() => showModalView(product)}><FontAwesomeIcon icon={faEye} /></a>
-                            <a><FontAwesomeIcon icon={faHeartReg} /></a>
+                            <a onClick={()=>addToWishlist(product.id)}><FontAwesomeIcon icon={faHeartReg} /></a>
                         </div>
                     </div>
                 </Col>

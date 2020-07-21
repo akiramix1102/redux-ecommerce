@@ -1,8 +1,22 @@
-import { ADD_TO_CART, ADD_TO_CART_WITH_OPTION, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, SORT_PRICE_ASC, SORT_PRICE_DES, SORT_NAME_ASC, SORT_NAME_DES ,FETCH_API, CLEAR_CART } from '../Action/action-types';
+import {
+    ADD_TO_CART,
+    ADD_TO_CART_WITH_OPTION,
+    REMOVE_ITEM,
+    SUB_QUANTITY,
+    ADD_QUANTITY,
+    SORT_PRICE_ASC,
+    SORT_PRICE_DES,
+    SORT_NAME_ASC,
+    SORT_NAME_DES,
+    FETCH_API,
+    CLEAR_CART,
+    ADD_TO_WISH_LIST
+} from '../Action/action-types';
 
 const initState = {
     items: [],
     addItems: [],
+    wishList: [],
     total: 0,
 }
 
@@ -24,8 +38,7 @@ const CartReducer = (state = initState, action) => {
                     ...state,
                     total: state.total + product.price
                 }
-            }
-            else {
+            } else {
                 product.quantity = 1;
                 const newTotal = state.total + product.price;
                 return {
@@ -44,8 +57,7 @@ const CartReducer = (state = initState, action) => {
                     ...state,
                     total: productOp.price * productOp.quantity
                 }
-            }
-            else {
+            } else {
                 productOp.chooseSize = action.size;
                 productOp.quantity = action.valueQuantity;
                 const newTotal = productOp.price * productOp.quantity;
@@ -66,8 +78,7 @@ const CartReducer = (state = initState, action) => {
                     addItems: new_items,
                     total: newTotal
                 }
-            }
-            else {
+            } else {
                 subQuantityItem.quantity -= 1;
                 let newTotal = state.total - subQuantityItem.price;
                 return {
@@ -107,19 +118,38 @@ const CartReducer = (state = initState, action) => {
             }
 
         case SORT_NAME_ASC:
-            let sortNameAsc=state.items.sort((a,b)=>a.title.localeCompare(b.title))          
-            return{
+            let sortNameAsc = state.items.sort((a, b) => a.title.localeCompare(b.title))
+            return {
                 ...state,
-                items:sortNameAsc
+                items: sortNameAsc
             }
-        
+
         case SORT_NAME_DES:
 
-                let sortNameDes=state.items.sort((a,b)=>b.title.localeCompare(a.title))
+            let sortNameDes = state.items.sort((a, b) => b.title.localeCompare(a.title))
+            return {
+                ...state,
+                items: sortNameDes
+            }
+
+            // add to wish list
+        case ADD_TO_WISH_LIST:
+            let productItem=state.items.find(item=>item.id===action.id);
+            const existItem = state.wishList.find(item => action.id === item.id);
+            if(!existItem)
+                {
+                    return{
+                        ...state,
+                        wishList:[...state.wishList,productItem]
+                    }
+                }            
+            else{
+                productItem.wishList=true;
                 return{
-                    ...state,
-                    items:sortNameDes
+                    ...state
                 }
+            }
+            
 
         default:
             return state

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector ,useDispatch} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import { Container, Row, Col, Table } from 'react-bootstrap';
 import Banner from '../Banner-Promotion/banner_new_in'
 import Item from './Item'
@@ -13,6 +13,8 @@ import bag from '../../imgs/blue_shoppictbasket_1484336511-1.png'
 
 function Cart() {
 
+    const history=useHistory();
+
     const dispatch=useDispatch();
 
     const listProduct = useSelector(state => state.addItems);
@@ -23,6 +25,10 @@ function Cart() {
         dispatch({
             type:'CLEAR_CART'
         })
+    }
+
+    const checkOut=()=>{
+        history.replace('/checkout')
     }
 
     return (
@@ -75,7 +81,7 @@ function Cart() {
                                             <li>Total <span>${total}</span></li>
                                         </ul>
                                     </div>
-                                    <button>Checkout now</button>
+                                    <button onClick={checkOut}>Checkout now</button>
                                 </Col>
                             </Row>
                         </Container>

@@ -63,6 +63,13 @@ function Content(props) {
         })
     }
 
+    const addToWishlist=id=>{
+        dispatch({
+            type:'ADD_TO_WISH_LIST',
+            id
+        })
+    }
+
     return (
         <>
             {
@@ -106,7 +113,7 @@ function Content(props) {
                             <a className="btn-buy" onClick={() => onAddToCartWithOption(item.id, size, valueQuantity)}>
                                 Add To Cart
                             </a>
-                            <a className="btn-wishlist">
+                            <a className="btn-wishlist" onClick={()=>addToWishlist(product.id)}>
                                 Add To Withlist
                             </a>
                         </Col>
