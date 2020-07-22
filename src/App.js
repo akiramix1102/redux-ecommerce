@@ -20,6 +20,7 @@ import Contact from './Component/Contact'
 import WishList from './Component/WishList/WishList';
 import CheckOut from './Component/CheckOut'
 import ScrollToTop from 'react-scroll-up'
+import DashBoard from './Dashboard'
 function App() {
   const dispatch = useDispatch();
 
@@ -50,6 +51,7 @@ function App() {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/wishlist" component={WishList} />
           <Route path="/checkout" component={CheckOut} />
+          <Route path="/dashboard" component={DashBoard} />
         </Switch>
 
         <ScrollToTop showUnder={200}

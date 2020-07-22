@@ -10,7 +10,7 @@ function TShirt() {
     const [show, setShow] = useState(false)
     const listProduct = useSelector(state => {
         return (
-            state.items.filter(item => item.category === 't-shirt')
+            state.items.filter(item => item.category === 'T-Shirt')
         )
     });
 

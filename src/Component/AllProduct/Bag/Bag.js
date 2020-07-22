@@ -11,7 +11,7 @@ function Bag() {
 
     const listProduct = useSelector(state => {
         return (
-            state.items.filter(item => item.category === 'bag')
+            state.items.filter(item => item.category === 'Bag')
         )
     });
 

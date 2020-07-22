@@ -10,7 +10,7 @@ function Short() {
     const [show, setShow] = useState(false)
     const listProduct = useSelector(state => {
         return (
-            state.items.filter(item => item.category === 'short')
+            state.items.filter(item => item.category === 'Short')
         )
     });
 

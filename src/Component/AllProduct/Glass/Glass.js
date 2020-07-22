@@ -10,7 +10,7 @@ function Glass() {
     const [show, setShow] = useState(false)
     const listProduct = useSelector(state => {
         return (
-            state.items.filter(item => item.category === 'glass')
+            state.items.filter(item => item.category === 'Glass')
         )
     });
 
