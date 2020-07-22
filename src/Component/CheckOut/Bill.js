@@ -96,7 +96,7 @@ function Bill() {
                             </FormGroup>
 
                             <FormGroup>
-                                <Button type="submit" color="primary">Send message</Button>
+                                <Button type="submit" color="primary">Order</Button>
                             </FormGroup>
                         </Form>
                     )

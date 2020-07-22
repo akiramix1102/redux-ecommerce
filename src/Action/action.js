@@ -10,7 +10,8 @@ import {
     SORT_NAME_DES,
     SORT_PRICE_DES,
     FETCH_API,
-    ADD_TO_WISH_LIST
+    ADD_TO_WISH_LIST,
+    FILTER_SIZE
 } from './action-types';
 
 
@@ -101,6 +102,14 @@ export const addToWishList = (id) => {
     return{
         type: ADD_TO_WISH_LIST,
         id
+    }
+}
+
+// filter size
+export const filterSize=(sizes)=>{
+    return{
+        type:FILTER_SIZE,
+        sizes
     }
 }
 

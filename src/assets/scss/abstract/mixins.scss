@@ -1,0 +1,37 @@
+// varibale
+$mobile-width: 575px;
+$tablet-width: 767px;
+$large-tablet: 991px;
+$desktop-width: 1199px;
+$large-desktop: 1200px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile-width+1px}) and (max-width:#{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin large-tablet {
+    @media (min-width: #{$tablet-width+1px}) and (max-width:#{$large-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$large-tablet+1px}) and (max-width:#{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width: #{$large-desktop}) {
+        @content;
+    }
+}
+

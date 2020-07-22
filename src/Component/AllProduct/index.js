@@ -40,10 +40,10 @@ function index() {
                                     <Tab eventKey="Bag" title="Bag" className="block-category">
                                         <Bag/>
                                     </Tab>
-
+{/* 
                                     <Tab  className="menu-item" eventKey="All" title="Show All Product">
                                         <Link to="/products" />
-                                    </Tab>
+                                    </Tab> */}
                                 </Tabs>
 
                             </div>

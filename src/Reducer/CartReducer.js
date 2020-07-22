@@ -11,6 +11,7 @@ import {
     FETCH_API,
     CLEAR_CART,
     ADD_TO_WISH_LIST
+    ,FILTER_SIZE
 } from '../Action/action-types';
 
 const initState = {
@@ -150,6 +151,10 @@ const CartReducer = (state = initState, action) => {
                 }
             }
             
+            case FILTER_SIZE:
+                // const productSize=state.items.filter(item=>item.sizes)
+                // console.log(productSize);
+
 
         default:
             return state

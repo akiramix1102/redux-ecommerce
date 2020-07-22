@@ -50,7 +50,7 @@ function Item(props) {
                 products.slice(0, number)
                     .map(product => {
                         return (
-                            <Col md={4} className="text-center" key={product.id}>
+                            <Col md={6} lg={4} className="text-center" key={product.id}>
                                 <div className="wrapper-product">
                                     <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="wrapper-product__img">
                                         <img src={product.images} alt={product.title} className="img-fluid"  />

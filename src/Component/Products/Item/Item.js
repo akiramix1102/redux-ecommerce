@@ -134,7 +134,7 @@ function Item({ Min, Max }) {
                 return (
                     <Col md={4} className="text-center" key={product.id}>
                         <div className="wrapper-product">
-                            <Link to="" className="wrapper-product__img">
+                            <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="wrapper-product__img">
                                 <img src={product.images} alt={product.title} className="img-fluid" onMouseOver={(e) => onMouseOver(e, product)} />
                             </Link>
                             <div className="wrapper-product__info">

@@ -17,7 +17,16 @@ function Item() {
         autoplaySpeed: 3000,
         arrows: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive:[
+            {
+                breakpoint: 1199,
+                settings:{
+                    arrows:false,
+                    dots:true
+                }
+            }
+        ]
     };
 
 
@@ -37,7 +46,7 @@ function Item() {
     const calculateTimeLeft = () => {
 
         const date=+new Date();
-        const difference = +new Date("2020-07-14") - date;
+        const difference = +new Date("2020-07-29") - date;
 
        
         let timeLeft = {};

@@ -15,11 +15,13 @@ function FeatureItem() {
     const settings = {
         dots: false,
         infinite: true,
-        autoplay:true,
+        autoplay:false,
         autoplaySpeed: 3000,
         arrows: false,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+
+        
     };
     const [show, setShow] = useState(false)
     const [data, setData] = useState([])

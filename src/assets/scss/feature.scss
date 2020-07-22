@@ -18,11 +18,32 @@
       .feature-products__wrapper {
         display: flex !important;
         align-items: center;
+        @include mobile{
+          width: auto !important;
+        }
+        @include tablet{
+          width: auto !important;
+        }
         .feature-info {
           padding-left: 50px;
           .heading-title {
             color: #444444;
             margin-bottom: 20px;
+
+            @include mobile{
+              margin-top: 20px;
+              text-align: center;
+              font-size: 24px;
+            }
+
+            @include tablet{
+              margin-top: 20px;
+              text-align: center;
+              font-size: 24px;
+            }
+            @include large-tablet{
+              font-size: 24px;
+            }
           }
           .price {
             color: #d10024;

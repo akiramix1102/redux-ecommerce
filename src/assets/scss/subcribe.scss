@@ -1,0 +1,55 @@
+.subscribe {
+    padding: 50px 0;
+    background-color: #337ab7;
+    .row {
+        align-items: center;
+    }
+    &__text {
+        color: #fff;
+        font-weight: 600;
+
+        @include mobile{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        @include tablet{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        @include large-tablet{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-bottom: 0;
+
+            @include mobile{
+                font-size: 24px;
+            }
+        }
+    }
+    &__input {
+        form {
+            display: flex;
+            input {
+                width: 100%;
+                padding: 10px 10px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            button {
+                border: none;
+                background-color: #fdba2d;
+                color: #fff;
+                text-transform: uppercase;
+                padding: 0 20px;
+            }
+        }
+    }
+}

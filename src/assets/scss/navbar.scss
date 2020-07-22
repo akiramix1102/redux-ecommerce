@@ -2,6 +2,10 @@
     .menu {
         width: 100%;
         background-color: #fff !important;
+        @include mobile{
+            display: flex;
+            justify-content: space-between;
+        }
         &-left {
             width: 100%;
             justify-content: center;
@@ -18,11 +22,20 @@
                 &:hover {
                     color: #337ab7 !important;
                 }
+                @include mobile{
+                    text-align: left;
+                }
             }
         }
         &-right {
             padding-left: 0;
             margin-bottom: 0;
+            @include tablet{
+                justify-content: center;
+            }
+            @include large-tablet{
+                justify-content: center;
+            }
             &__item {
                 position: relative;
                 list-style: none;

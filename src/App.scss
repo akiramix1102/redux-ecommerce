@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Poppins";
   src: local("Poppins"), url(./fonts/Poppins-Regular.ttf) format("opentype");
@@ -9,7 +10,8 @@
 body {
   font-family: Poppins !important;
 }
-
+@import './assets/scss/abstract/mixins.scss';
+@import "~bootstrap/scss/bootstrap";
 @import './assets/scss/about.scss';
 @import './assets//scss/banner.scss';
 @import './assets/scss/blog.scss';
@@ -27,3 +29,4 @@ body {
 @import './assets/scss/feature.scss';
 @import './assets/scss/slide.scss';
 @import './assets/scss/login.scss';
+@import './assets/scss/subcribe.scss';
