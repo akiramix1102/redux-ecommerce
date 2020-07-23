@@ -113,6 +113,16 @@ export const filterSize=(sizes)=>{
     }
 }
 
+// FILTER PRICE
+
+export const filterPrice=(from,to)=>{
+    return{
+        type:FILTER_SIZE,
+        from,
+        to
+    }
+}
+
 //fetch api
 export const fetchApi = products => {
     return {

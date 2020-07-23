@@ -11,7 +11,8 @@ import {
     FETCH_API,
     CLEAR_CART,
     ADD_TO_WISH_LIST
-    ,FILTER_SIZE
+    , FILTER_SIZE
+    , FILTER_PRICE
 } from '../Action/action-types';
 
 const initState = {
@@ -19,6 +20,8 @@ const initState = {
     addItems: [],
     wishList: [],
     total: 0,
+    filterSize: '',
+    filterPrice:[0,200]
 }
 
 const CartReducer = (state = initState, action) => {
@@ -133,27 +136,36 @@ const CartReducer = (state = initState, action) => {
                 items: sortNameDes
             }
 
-            // add to wish list
+        // add to wish list
         case ADD_TO_WISH_LIST:
-            let productItem=state.items.find(item=>item.id===action.id);
+            let productItem = state.items.find(item => item.id === action.id);
             const existItem = state.wishList.find(item => action.id === item.id);
-            if(!existItem)
-                {
-                    return{
-                        ...state,
-                        wishList:[...state.wishList,productItem]
-                    }
-                }            
-            else{
-                productItem.wishList=true;
-                return{
+            if (!existItem) {
+                return {
+                    ...state,
+                    wishList: [...state.wishList, productItem]
+                }
+            }
+            else {
+                productItem.wishList = true;
+                return {
                     ...state
                 }
             }
+
+        case FILTER_SIZE:
+            return {
+                ...state,
+                filterSize: action.size
+            }
+
+        case FILTER_PRICE:
+            return{
+                ...state,
+                filterPrice:action.value
+            }
             
-            case FILTER_SIZE:
-                // const productSize=state.items.filter(item=>item.sizes)
-                // console.log(productSize);
+
 
 
         default:

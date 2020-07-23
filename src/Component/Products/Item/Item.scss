@@ -1,6 +1,7 @@
 .form {
     margin-bottom: 20px;
     display: flex;
+    align-items: center;
     .form__sort,
     .form__show {
         display: flex;
@@ -16,6 +17,9 @@
     }
     .form__sort {
         margin-right: 20px;
+    }
+    .product-lenght{
+        margin-bottom: 20px;
     }
 }
 

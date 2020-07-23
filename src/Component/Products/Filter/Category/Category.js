@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import { category } from '../../../../Constant'
 import categoryStyles from './Category.module.scss'
 function Category() {
-
     
     return (
         <div className={categoryStyles["category"]}>
             <h4>Categories</h4>
             <ul>
-                <li>
+                {/* <li as >
                     <Link to="/products" >All</Link>
-                </li>
+                </li> */}
                 {category.map((item, index) => {
                     return (
-                        <li key={index}>
-                            <Link to={`/products/${item}`} >{item}</Link>
-                        </li>
+                        <Link to={`/products/${item}`} >
+                            <li key={index}>
+                                {item}
+                            </li>
+                        </Link>
+                        // <li key={index}>
+                        //     <Link to={`/products/${item}`} >{item}</Link>
+                        // </li>
                     )
                 })}
             </ul>

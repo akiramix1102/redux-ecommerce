@@ -10,19 +10,25 @@
     ul{
         list-style: none;
         margin-bottom: 0;
-        li{
-            background-color: #1696e7;
-            padding: 10px 10px;
-            border-bottom: 1px solid #fff;
-            transition: 0.3s;
-            &:hover{
-                background-color: #fdba2d;
-                padding-left: 20px;
+        a{
+            text-decoration: none;
+            color: #fff;
+            li{
+                background-color: #1696e7;
+                padding: 10px 10px;
+                border-bottom: 1px solid #fff;
+                transition: 0.3s;
+                cursor: pointer;
+                &:hover{
+                    background-color: #fdba2d;
+                    padding-left: 20px;
+                }
             }
-            a{
-                text-decoration: none;
-                color: #fff;
-            }
+            
         }
+       
     }
+}
+.active{
+    background-color: red !important;
 }

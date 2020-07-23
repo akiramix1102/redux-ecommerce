@@ -11,24 +11,92 @@ function Item({ Min, Max }) {
 
     const { item } = useParams();
 
-    const [min,setMin]=useState(Min)
-    const [max,setMax]=useState(Max)
+    const [min, setMin] = useState(Min)
+    const [max, setMax] = useState(Max)
 
-    useEffect(()=>{
+    useEffect(() => {
         setMin(Min)
         setMax(Max)
-    },[Min,Max])
-    
+    }, [Min, Max])
+
 
     let listProducts = useSelector(state => {
-        if (item) {
+
+        // const products = state.items.filter(product => product.category === item);
+        // const result = products.filter(elm => elm.price >= state.filterPrice[0] && elm.price <= state.filterPrice[1])
+        // return result;
+
+        if (item === 'Polo' || item === 'T-Shirt' || item === 'Shirt') {
+            
+            // const products = state.items.filter(product => product.category === item);
+            // const result = products.filter(elm => elm.price >= state.filterPrice[0] && elm.price <= state.filterPrice[1])
+            switch (state.filterSize) {
+                case 'S':
+                    const productSizeS = state.items.filter(product => product.category === item)
+                    return productSizeS.filter(item => item.sizes.includes('S'))
+
+                case 'M':
+                    const productSizeM = state.items.filter(product => product.category === item)
+                    return productSizeM.filter(item => item.sizes.includes('M'))
+
+                case 'L':
+                    const productSizeL = state.items.filter(product => product.category === item)
+                    return productSizeL.filter(item => item.sizes.includes('L'))
+
+                case 'XL':
+                    const productSizeXl = state.items.filter(product => product.category === item)
+                    return productSizeXl.filter(item => item.sizes.includes('XL'))
+
+                case 'XXL':
+                    const productSizeXxl = state.items.filter(product => product.category === item)
+                    return productSizeXxl.filter(item => item.sizes.includes('XXL'))
+
+                default:
+                    return state.items.filter(product => product.category === item);
+            }
+        }
+
+        if (item === 'Jean' || item === 'Short' || item === 'Trouser') {
+            switch (state.filterSize) {
+                case 28:
+                    const productSizeS = state.items.filter(product => product.category === item)
+                    return productSizeS.filter(item => item.sizes.includes(28))
+
+                case 29:
+                    const productSizeM = state.items.filter(product => product.category === item)
+                    return productSizeM.filter(item => item.sizes.includes(29))
+
+                case 30:
+                    const productSizeL = state.items.filter(product => product.category === item)
+                    return productSizeL.filter(item => item.sizes.includes(30))
+
+                case 31:
+                    const productSizeXl = state.items.filter(product => product.category === item)
+                    return productSizeXl.filter(item => item.sizes.includes(31))
+
+                case 32:
+                    const productSizeXxl = state.items.filter(product => product.category === item)
+                    return productSizeXxl.filter(item => item.sizes.includes(32))
+
+                default:
+                    return state.items.filter(product => product.category === item);
+            }
+        }
+
+        if (!item) {
+            return state.items
+        }
+        else {
             return state.items.filter(product => product.category === item);
         }
-        return state.items
+        
+        
+
     })
 
 
-    
+
+
 
     const [currentPage, setCurrentPage] = useState(1);
     const [productPerPage, setProductPerPage] = useState(9);
@@ -105,9 +173,9 @@ function Item({ Min, Max }) {
 
     }
 
-    const addToWishlist=id=>{
+    const addToWishlist = id => {
         dispatch({
-            type:'ADD_TO_WISH_LIST',
+            type: 'ADD_TO_WISH_LIST',
             id
         })
     }
@@ -116,7 +184,7 @@ function Item({ Min, Max }) {
     return (
         <>
             <Col md={12}>
-                <Form className="form" >
+                <Form className="form">
                     <Form.Group className="form__sort">
                         <Form.Label>Sort By</Form.Label>
                         <Form.Control as="select" onChange={e => handleChange(e)}>
@@ -126,6 +194,7 @@ function Item({ Min, Max }) {
                             <option value="-2">Price High - Low</option>
                         </Form.Control>
                     </Form.Group>
+                    <span className="product-lenght">of {listProducts.length} products</span>
                 </Form>
             </Col>
 
@@ -155,7 +224,7 @@ function Item({ Min, Max }) {
                                 <div className="wrapper-product__info-action">
                                     <a className="btn-buy" onClick={() => addToCart(product.id)}>Add to cart</a>
                                     <div className="feature-icon">
-                                        <a onClick={()=>addToWishlist(product.id)}><FontAwesomeIcon icon={faHeartReg} /></a>
+                                        <a onClick={() => addToWishlist(product.id)}><FontAwesomeIcon icon={faHeartReg} /></a>
                                     </div>
                                 </div>
                             </div>
