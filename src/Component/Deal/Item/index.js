@@ -9,7 +9,7 @@ import Slider from "react-slick";
 
 function Item() {
 
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
 
     const listProductsDeal = useSelector(state => state.items.filter(item => item.deal === true))
 
@@ -92,11 +92,11 @@ function Item() {
         );
     });
 
-    const onAddToCart=(id,string)=>{
+    const onAddToCart = (id, string) => {
         dispatch({
-        type:'ADD_TO_CART',
-        string:'Cart',
-        id
+            type: 'ADD_TO_CART',
+            string: 'Cart',
+            id
         })
     }
 
@@ -108,7 +108,10 @@ function Item() {
                     return (
                         <Row key={product.id} className="d-flex">
                             <Col md={5} className="deal__img">
-                                <img src={product.images} alt={product.title} className="img-fluid" />
+                                <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="deal__info-link">
+                                    <img src={product.images} alt={product.title} className="img-fluid" />
+                                </Link>
+
                             </Col>
                             <Col md={7} className="deal__info">
                                 <div className="deal__info-title">
@@ -127,7 +130,7 @@ function Item() {
                                     <ul className="price-action">
                                         <li>&#36;{product.price}.00
                                         </li>
-                                        <li><a className="btn-buy" onClick={()=>onAddToCart(product.id)}>Add to cart</a></li>
+                                        <li><a className="btn-buy" onClick={() => onAddToCart(product.id)}>Add to cart</a></li>
                                     </ul>
                                     <div className="time-count-deal">
                                         {timerComponents.length ? timerComponents : <span>Time's up!</span>}

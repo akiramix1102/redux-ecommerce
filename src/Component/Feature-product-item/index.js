@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Slider from "react-slick";
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
@@ -15,13 +16,13 @@ function FeatureItem() {
     const settings = {
         dots: false,
         infinite: true,
-        autoplay:false,
+        autoplay: false,
         autoplaySpeed: 3000,
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
 
-        
+
     };
     const [show, setShow] = useState(false)
     const [data, setData] = useState([])
@@ -31,7 +32,7 @@ function FeatureItem() {
             state.items.filter(item => item.feature === true)
         )
     })
-    
+
     // render star rating
     const showRating = rating => {
         let result = [];
@@ -48,7 +49,7 @@ function FeatureItem() {
         setShow(!show);
         setData(product);
     }
-    const onHide =()=>{
+    const onHide = () => {
         setShow(!show)
     }
 
@@ -59,9 +60,9 @@ function FeatureItem() {
         })
     }
 
-    const addToWishlist=id=>{
+    const addToWishlist = id => {
         dispatch({
-            type:'ADD_TO_WISH_LIST',
+            type: 'ADD_TO_WISH_LIST',
             id
         })
     }
@@ -71,10 +72,17 @@ function FeatureItem() {
 
             <Row className="feature-products__wrapper" key={product.id}>
                 <Col md={4} className="feature-image">
-                    <img src={product.images} alt={product.title} className="img-fluid" />
+                    <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="deal__info-link">
+                        <img src={product.images} alt={product.title} className="img-fluid" />
+                    </Link>
+
                 </Col>
                 <Col md={8} className="feature-info">
-                    <h3 className="heading-title">{product.title}</h3>
+                    <h3 className="heading-title">
+                        <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="deal__info-link">
+                            {product.title}
+                        </Link>
+                    </h3>
                     <ul className="rating">
                         <li>
                             {showRating(product.rating)}
@@ -86,10 +94,10 @@ function FeatureItem() {
                     </h4>
                     <p className="des">{product.description}</p>
                     <div className="feature-action">
-                    <a className="btn-buy" onClick={() => addToCart(product.id)}>Add to cart</a>
+                        <a className="btn-buy" onClick={() => addToCart(product.id)}>Add to cart</a>
                         <div className="feature-icon">
                             <a onClick={() => showModalView(product)}><FontAwesomeIcon icon={faEye} /></a>
-                            <a onClick={()=>addToWishlist(product.id)}><FontAwesomeIcon icon={faHeartReg} /></a>
+                            <a onClick={() => addToWishlist(product.id)}><FontAwesomeIcon icon={faHeartReg} /></a>
                         </div>
                     </div>
                 </Col>
@@ -103,7 +111,7 @@ function FeatureItem() {
             <Slider {...settings}>
                 {listItems}
             </Slider>
-            <ModalView product={data} show={show} hide={onHide}/>
+            <ModalView product={data} show={show} hide={onHide} />
         </>
     );
 }
