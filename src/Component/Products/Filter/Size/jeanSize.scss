@@ -19,6 +19,9 @@
             border: 1px solid #ccc;
             transition: 0.3s;
             cursor: pointer;
+            &:hover{
+                background-color: #fdba2d;
+            }
         }
         .active{
             background-color: #fdba2d;

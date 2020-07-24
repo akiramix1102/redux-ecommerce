@@ -53,6 +53,7 @@ const FormMain = ({ onSubmit }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
     };
+    
 
     const handleClick = () => {
         const size = selectedSize.map(elm => elm.value)

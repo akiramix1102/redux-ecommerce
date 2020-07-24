@@ -10,6 +10,7 @@ import { faStar, faEye } from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarReg, faHeart as faHeartReg } from '@fortawesome/free-regular-svg-icons'
 import ModalView from '../../../Modal/QuickView';
 
+
 function Related() {
 
 
@@ -18,9 +19,9 @@ function Related() {
     const listProducts = useSelector(state => state.items.filter(item => item.category === category))
 
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         arrows: false,
         slidesToShow: 3,

@@ -39,13 +39,6 @@ function Menu() {
         setShowFormSignIn(false)
     }
 
-    // useEffect(() => {
-    //     setName(JSON.parse(localStorage.getItem('name')));
-    // }, [firebase.getCurrentUsername()])
-
-
-    console.log(firebase.getCurrentUsername());
-
     const signOut=()=>{
         firebase.logout();
     }
@@ -68,11 +61,11 @@ function Menu() {
                             <NavLink exact activeClassName="active" to="/contact" className="menu-item">Contact Us</NavLink>
                         </Nav>
                         <ul className="menu-right d-flex">
-                            {
+                            {/* {
                                 (firebase.getCurrentUsername())
                                     ?
                                     ''
-                                    :
+                                    : */}
                                     <li className="menu-right__item menu-right__item--submenu">
                                         <Link to=""><FontAwesomeIcon icon={faUserPlus} /></Link>
                                         <ul className="sub-menu">
@@ -80,9 +73,9 @@ function Menu() {
                                             <li onClick={onShowFormSignUp}>Sign Up</li>
                                         </ul>
                                     </li>
-                            }
+                            {/* } */}
 
-                            {
+                            {/* {
                                 (firebase.getCurrentUsername())
                                     ?
                                     <li className="menu-right__item">
@@ -93,7 +86,7 @@ function Menu() {
                                     </li>
                                     :
                                     ''
-                            }
+                            } */}
 
                             <li className="menu-right__item">
                                 <Link to="/wishlist"><FontAwesomeIcon icon={faHeart} /></Link>

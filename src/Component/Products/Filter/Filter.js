@@ -14,7 +14,7 @@ function Filter({min_max}) {
 
             <Category />
 
-            <Price getData={onGetData} />
+            {/* <Price getData={onGetData} /> */}
 
             <ShirtSize />
 

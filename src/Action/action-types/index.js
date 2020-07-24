@@ -12,3 +12,4 @@ export const FETCH_API= 'FETCH_API';
 export const ADD_TO_WISH_LIST='ADD_TO_WISH_LIST';
 export const FILTER_SIZE='FILTER_SIZE';
 export const FILTER_PRICE='FILTER_PRICE';
+export const ADD_COUPON='ADD_COUPON';

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector ,useDispatch} from 'react-redux'
 import {Link, useHistory} from 'react-router-dom'
 import { Container, Row, Col, Table } from 'react-bootstrap';
+
 import Banner from '../Banner-Promotion/banner_new_in'
 import Item from './Item'
 import Subcribe from '../Subscribe'
@@ -19,6 +20,8 @@ function Cart() {
 
     const listProduct = useSelector(state => state.addItems);
     const total = useSelector(state => state.total)
+    const discount=useSelector(state=>state.discount)
+    
     const [coupon, setCoupon] = useState('')
 
     const handleClearCart=()=>{
@@ -29,6 +32,14 @@ function Cart() {
 
     const checkOut=()=>{
         history.replace('/checkout')
+    }
+
+    const handleApplyCoupon=(e)=>{
+        e.preventDefault()
+        dispatch({
+            type:'ADD_COUPON',
+            coupon
+        })
     }
 
     return (
@@ -43,6 +54,7 @@ function Cart() {
                                     <Table responsive className={cartStyles["table"]}>
                                         <thead>
                                             <tr>
+                                                <th></th>
                                                 <th>#</th>
                                                 <th>Image</th>
                                                 <th>Product Name</th>
@@ -65,7 +77,7 @@ function Cart() {
                                             placeholder="Coupon code"
                                             onChange={e => setCoupon(e.target.value)}
                                         />
-                                        <button>apply coupon</button>
+                                        <button onClick={e=>handleApplyCoupon(e)}>apply coupon</button>
                                     </form>
                                 </Col>
                                 <Col md={3} className={cartStyles["clear"]}>
@@ -77,7 +89,8 @@ function Cart() {
                                     <div className={cartStyles["total__inner"]}>
                                         <h4>Cart Total</h4>
                                         <ul>
-                                            <li>Subtotal <span>${total}</span></li>
+                                            <li>Subtotal <span>${total+discount}</span></li>
+                                            <li>Discount <span>-${discount}</span></li>
                                             <li>Total <span>${total}</span></li>
                                         </ul>
                                     </div>

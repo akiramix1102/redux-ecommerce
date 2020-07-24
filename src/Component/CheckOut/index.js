@@ -15,7 +15,6 @@ function index() {
                         <Bill />
                         <Order />
                     </Row>
-
                 </Container>
             </section>
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom'
 import { Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
@@ -7,6 +8,8 @@ import { faStar as faStarReg, } from '@fortawesome/free-regular-svg-icons'
 import Slider from "react-slick";
 
 function Item() {
+
+    const dispatch=useDispatch();
 
     const listProductsDeal = useSelector(state => state.items.filter(item => item.deal === true))
 
@@ -18,17 +21,16 @@ function Item() {
         arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        responsive:[
+        responsive: [
             {
                 breakpoint: 1199,
-                settings:{
-                    arrows:false,
-                    dots:true
+                settings: {
+                    arrows: false,
+                    dots: true
                 }
             }
         ]
     };
-
 
 
     // render rating
@@ -45,10 +47,10 @@ function Item() {
 
     const calculateTimeLeft = () => {
 
-        const date=+new Date();
+        const date = +new Date();
         const difference = +new Date("2020-07-29") - date;
 
-       
+
         let timeLeft = {};
 
         if (difference > 0) {
@@ -59,8 +61,8 @@ function Item() {
                 seconds: Math.floor((difference / 1000) % 60)
             };
         }
-        else{
-            
+        else {
+
         }
 
         return timeLeft;
@@ -90,6 +92,14 @@ function Item() {
         );
     });
 
+    const onAddToCart=(id,string)=>{
+        dispatch({
+        type:'ADD_TO_CART',
+        string:'Cart',
+        id
+        })
+    }
+
 
     return (
         <>
@@ -102,7 +112,12 @@ function Item() {
                             </Col>
                             <Col md={7} className="deal__info">
                                 <div className="deal__info-title">
-                                    <h3>{product.title}</h3>
+                                    <h3>
+                                        <Link to={`/products/${product.category}/${product.id}/${product.title}`} className="deal__info-link">
+                                            {product.title}
+                                        </Link>
+                                    </h3>
+
                                     <p>{product.description}</p>
                                     <ul className="rating">
                                         <li>
@@ -112,7 +127,7 @@ function Item() {
                                     <ul className="price-action">
                                         <li>&#36;{product.price}.00
                                         </li>
-                                        <li><a className="btn-buy">Add to cart</a></li>
+                                        <li><a className="btn-buy" onClick={()=>onAddToCart(product.id)}>Add to cart</a></li>
                                     </ul>
                                     <div className="time-count-deal">
                                         {timerComponents.length ? timerComponents : <span>Time's up!</span>}

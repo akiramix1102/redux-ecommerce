@@ -11,7 +11,8 @@ import {
     SORT_PRICE_DES,
     FETCH_API,
     ADD_TO_WISH_LIST,
-    FILTER_SIZE
+    FILTER_SIZE,
+    ADD_COUPON
 } from './action-types';
 
 
@@ -53,6 +54,17 @@ export const subQuantity = (id) => {
     return {
         type: SUB_QUANTITY,
         id
+    }
+}
+
+//remove product
+export const removeProduct=(id,price,quantity,string)=>{
+    return{
+        type:REMOVE_ITEM,
+        string,
+        id,
+        price,
+        quantity
     }
 }
 
@@ -99,27 +111,36 @@ export const sortNameDes = (value, item) => {
 }
 
 export const addToWishList = (id) => {
-    return{
+    return {
         type: ADD_TO_WISH_LIST,
         id
     }
 }
 
 // filter size
-export const filterSize=(sizes)=>{
-    return{
-        type:FILTER_SIZE,
+export const filterSize = (sizes) => {
+    return {
+        type: FILTER_SIZE,
         sizes
     }
 }
 
 // FILTER PRICE
 
-export const filterPrice=(from,to)=>{
-    return{
-        type:FILTER_SIZE,
+export const filterPrice = (from, to) => {
+    return {
+        type: FILTER_SIZE,
         from,
         to
+    }
+}
+
+//add coupon
+
+export const addCoupon = coupon => {
+    return {
+        type: ADD_COUPON,
+        coupon
     }
 }
 

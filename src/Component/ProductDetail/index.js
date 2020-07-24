@@ -7,10 +7,12 @@ import Content from './DetailContent'
 import Description from './Description'
 import RelatedProduct from './Ralated'
 import Banner from '../Banner-Promotion/banner_new_in'
+import Footer from '../Footer'
 
 
 function ProuctDetail() {
     const { id,title } = useParams();
+    console.log(title);
     let products = useSelector(state => {
         if (title) {
             return state.items.filter(product => product.title === title);
@@ -36,6 +38,7 @@ function ProuctDetail() {
                     <RelatedProduct/>
                 </Row>
             </Container>
+            <Footer/>
         </>
     );
 }

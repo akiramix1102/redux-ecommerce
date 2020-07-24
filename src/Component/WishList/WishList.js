@@ -8,7 +8,8 @@ import Subcribe from '../Subscribe'
 import Footer from '../Footer'
 import cartStyles from './Cart.module.scss'
 import  './Cart.module.scss'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 function WishList() {
@@ -28,14 +29,17 @@ function WishList() {
                         <Container>
                             <Row style={{margin:'100px 0'}}>
                                 <Col md={12}>
-                                <h2 style={{textAlign:"center"}}>Your Wish List</h2>
+                                
+                                <h2 style={{textAlign:"center",color:'#e03c3c'}}><FontAwesomeIcon icon={faHeart}/>  Your Wish List</h2>
                                     <Table responsive className={cartStyles["table"]}>
                                         <thead>
                                             <tr>
+                                            <th></th>
                                                 <th>#</th>
                                                 <th>Image</th>
                                                 <th>Product Name</th>
                                                 <th>Price</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>

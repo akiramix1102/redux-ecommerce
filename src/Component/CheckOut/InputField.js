@@ -26,6 +26,7 @@ function InputField(props) {
   const { errors, touched } = form;
   const showError = errors[name] && touched[name];
   return (
+
     <FormGroup>
 
   <FormLabel>{name} <span style={{color:'red'}}>*</span></FormLabel>
@@ -39,7 +40,7 @@ function InputField(props) {
       />
       {showError && <p className="error">{errors[name]}</p>}
     </FormGroup>
-
+      
   );
 }
 

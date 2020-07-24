@@ -37,15 +37,19 @@ function DashBoard(props) {
 
     // add product
 
-    const handlePost = (name, category, oldPrice, newPrice, size) => {
+    
 
+    const handlePost = (name, category, oldPrice, newPrice, size) => {
+        const random=Math.random()*5;
+        const rating=Math.ceil(random);
         axios
             .post(baseUrl, {
                 title: name,
                 category: category,
                 oldprice: oldPrice * 1,
                 price: newPrice * 1,
-                sizes: size
+                sizes: size,
+                rating:rating
             })
             .then((res) => setProducts(products.concat(res.data)))
             .catch((error) => console.error(error));
