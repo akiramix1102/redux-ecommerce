@@ -17,7 +17,7 @@ const FormTable = ({ products, onDelete, getDataToPut }) => {
     }
 
     const handleDelete = (id) => {
-        // onDelete(id * 1);
+        onDelete(id * 1);
     };
 
     const handleToggleHide = () => {
@@ -43,6 +43,7 @@ const FormTable = ({ products, onDelete, getDataToPut }) => {
                         <th>Name Product</th>
                         <th>Category</th>
                         <th>Price</th>
+                        <th>Old Price</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -50,15 +51,16 @@ const FormTable = ({ products, onDelete, getDataToPut }) => {
                     {products.map((product, index) => {
                         return (
                             <tr key={index}>
-                                <td>{index}</td>
+                                <td>{index+1}</td>
                                 <td>{product.title}</td>
                                 <td>{product.category}</td>
                                 <td>{product.price}</td>
+                                <td>{product.oldprice}</td>
                                 <td>
-                                    <button onClick={() => onShowModal(product)}>
+                                    <button style={{marginRight:'5px'}} onClick={() => onShowModal(product)}>
                                         <FontAwesomeIcon icon={faEdit} />
                                     </button>
-                                    <button onClick={() => handleDelete(product.id)}>
+                                    <button style={{marginLeft:'5px'}} onClick={() => handleDelete(product.id)}>
                                         <FontAwesomeIcon icon={faTrash} />
                                     </button>
                                 </td>

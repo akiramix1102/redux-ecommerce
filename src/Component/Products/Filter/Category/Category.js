@@ -8,9 +8,11 @@ function Category() {
         <div className={categoryStyles["category"]}>
             <h4>Categories</h4>
             <ul>
-                {/* <li as >
-                    <Link to="/products" >All</Link>
-                </li> */}
+            <Link to="/products" >
+                            <li >
+                                All
+                            </li>
+                        </Link>
                 {category.map((item, index) => {
                     return (
                         <Link to={`/products/${item}`} >

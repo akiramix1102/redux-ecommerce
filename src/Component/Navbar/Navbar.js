@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Navbar, Nav, } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link,NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faShoppingCart, faUserCircle } from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import Login from '../../Modal/Login/Login';
 import SignUp from '../../Modal/SignUp/SignUp';
 import firebase from '../../firebase'
-function Navbar1() {
+function Menu() {
 
     const [showFormSignIn, setShowFormSignIn] = useState(false)
     const [showFormSignUp, setShowFormSignUp] = useState(false)
@@ -60,12 +60,12 @@ function Navbar1() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto wrap-menu menu-left">
-                            <Nav.Link as={Link} to="/" className="menu-item">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/products" className="menu-item menu-item--sub">Products
-                            </Nav.Link>
-                            <Nav.Link as={Link} to="/blog" className="menu-item">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="/about" className="menu-item">About Us</Nav.Link>
-                            <Nav.Link as={Link} to="/contact" className="menu-item">Contact Us</Nav.Link>
+                            <NavLink exact activeClassName="active" to="/" className="menu-item">Home</NavLink>
+                            <NavLink exact  to="/products" className="menu-item menu-item--sub">Products
+                            </NavLink>
+                            <NavLink  exact  activeClassName="active" to="/blog" className="menu-item">Blog</NavLink>
+                            <NavLink  exact activeClassName="active" to="/about" className="menu-item">About Us</NavLink>
+                            <NavLink exact activeClassName="active" to="/contact" className="menu-item">Contact Us</NavLink>
                         </Nav>
                         <ul className="menu-right d-flex">
                             {
@@ -116,4 +116,4 @@ function Navbar1() {
     );
 }
 
-export default Navbar1;
+export default Menu;

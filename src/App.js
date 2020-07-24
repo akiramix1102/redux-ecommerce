@@ -6,9 +6,9 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { fetchApi } from './Action/action'
 import './App.scss';
-import { barseUrl } from './Constant'
+import { baseUrl } from './Constant'
 import { Container } from 'react-bootstrap';
-import Navbar from './Component/Navbar/Navbar';
+import Menu from './Component/Navbar/Navbar'
 import { Route, Switch } from 'react-router-dom'
 import Home from './Component/Home/Home';
 import Products from './Component/Products/Products'
@@ -25,7 +25,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get(barseUrl)
+    axios.get(baseUrl)
       .then(res => dispatch(fetchApi(res.data)))
       .catch(e => console.error(e))
   }, [dispatch])
@@ -36,7 +36,7 @@ function App() {
       <div className="wrap-all">
         <section className="header">
           <Container>
-            <Navbar />
+            <Menu />
           </Container>
         </section>
   

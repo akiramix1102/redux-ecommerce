@@ -43,19 +43,28 @@ const ModalExample = (props) => {
     }
     const handleOnChangeCateory = (e) => {
         setCategory(e.target.value)
-        
+
     }
-    const handleSubmit = (e,id) => {
+    const handleSubmit = (e, id) => {
         e.preventDefault();
-        getDataToPut(nameValue, priceValue,oldPriceValue, category, id * 1);
+        getDataToPut(nameValue, priceValue, oldPriceValue, category, id * 1);
         toggleHide();
-        
-        
+        setTimeout(() => {
+            window.location.reload();
+        }, 300)
     }
     return (
         <div>
             <Modal show={isOpen} onHide={onHideModal} className={className}>
-                <Modal.Header ><h3 className="text-center" style={{width:'100%'}}>Edit Product</h3></Modal.Header>
+                <Modal.Header ><h3 className="text-center heading" style={{
+                    width: '100%',
+                    borderBottom: '1px solid #ccc',
+                    margin:'10px 0',
+                    paddingBottom:'10px',
+                    fontWeight:'bold'
+                }}>
+                    Edit Product
+                </h3></Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
                         <Row>
@@ -100,8 +109,8 @@ const ModalExample = (props) => {
                             </Col>
                             <Col>
                                 <FormGroup>
-                                    <FormLabel for="stock">Stock</FormLabel>
-                                    <Form.Control as="select" name="category" id="category" onChange={e=>handleOnChangeCateory(e)}>
+                                    <FormLabel for="stock">Category</FormLabel>
+                                    <Form.Control as="select" name="category" id="category" onChange={e => handleOnChangeCateory(e)}>
                                         <option value="T-Shirt" selected>T-Shirt</option>
                                         <option value="Shirt">Shirt</option>
                                         <option value="Polo" >Polo</option>
@@ -116,14 +125,21 @@ const ModalExample = (props) => {
                         </Row>
                     </Form>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button color="primary" type="submit" onClick={(e) => handleSubmit(e, product.id)}>
+                <div class="modal-edit-footer"
+                    style={
+                        {
+                            padding:'20px 1rem',
+                            textAlign:'center'
+                        }
+                    }
+                >
+                    <button  type="submit" className="btn-submit" onClick={(e) => handleSubmit(e, product.id)}>
                         Save
-          </Button>
-                    <Button color="secondary" onClick={() => onHideModal(isOpen)}>
+                    </button>
+                    <button className="btn-cancel" onClick={() => onHideModal(isOpen)}>
                         Cancel
-          </Button>
-                </Modal.Footer>
+                    </button>
+                </div>
             </Modal>
         </div>
     );

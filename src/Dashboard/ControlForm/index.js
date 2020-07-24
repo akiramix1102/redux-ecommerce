@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { Col, Button, Dropdown, Form } from 'react-bootstrap'
-function ControlForm({ onShowForm,onSort,handleSearch }) {
+import { Col, Button, Dropdown } from 'react-bootstrap'
+function ControlForm({ onShowForm,onSort,onChangeProductPerPage }) {
 
 
 
-    const [value, setValue] = useState('')
-    const [dropdownOpen, setOpen] = useState(false);
+    // const [value, setValue] = useState('')
+    // const [dropdownOpen, setOpen] = useState(false);
     const [showForm, setShowForm] = useState(true)
     const [selectValue, setSelectValue] = useState(5)
-    const onChangeValue = (e) => {
-        setValue(e.target.value)
-    }
 
-    const onHandleSearch=()=>{
-        handleSearch(value);
-    }
+    // const onChangeValue = (e) => {
+    //     setValue(e.target.value)
+    // }
+
+    // const onHandleSearch=()=>{
+    //     handleSearch(value);
+    // }
 
     const handleClick = (sortBy, sortValue) => {       
         onSort(sortBy, sortValue)
@@ -27,8 +28,8 @@ function ControlForm({ onShowForm,onSort,handleSearch }) {
         onShowForm(showForm);
     }
     const handleChangeValue = (e) => {
-        // setSelectValue(e.target.value*1);
-        // onChangeProductPerPage(e.target.value*1);
+        setSelectValue(e.target.value*1);
+        onChangeProductPerPage(e.target.value*1);
     }
     return (
         <>
@@ -37,7 +38,7 @@ function ControlForm({ onShowForm,onSort,handleSearch }) {
                     Add Product
           </Button>
             </Col>
-            <Col md={6}>
+            {/* <Col md={6}>
                 <div className="input-group">
                     <input
                         type="text"
@@ -53,7 +54,7 @@ function ControlForm({ onShowForm,onSort,handleSearch }) {
             </button>
                     </span>
                 </div>
-            </Col>
+            </Col> */}
             <Col md={2}>
                 <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -69,7 +70,7 @@ function ControlForm({ onShowForm,onSort,handleSearch }) {
                     </Dropdown.Menu>
                 </Dropdown>
             </Col>
-            <Col md={2}>
+            <Col md={2} style={{marginLeft:'auto'}}>
                 <form>
                     <div className="form-group">
                         <select className="form-control" id="exampleFormControlSelect1" value={selectValue} onChange={handleChangeValue}>

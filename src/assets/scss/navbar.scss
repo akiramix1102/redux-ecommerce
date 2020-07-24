@@ -21,10 +21,15 @@
                 position: relative;
                 &:hover {
                     color: #337ab7 !important;
+                    text-decoration: none;
                 }
                 @include mobile{
                     text-align: left;
                 }
+            }
+            .active{
+                color: #337ab7;
+                text-decoration: none;
             }
         }
         &-right {
