@@ -10,7 +10,7 @@ import cartStyles from './Cart.module.scss'
 import  './Cart.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-
+import Helmet from 'react-helmet';
 
 function WishList() {
 
@@ -22,6 +22,9 @@ function WishList() {
 
     return (
         <>
+        <Helmet>
+            <title>Wish List</title>
+        </Helmet>
             <Banner />
             {
                 (listProduct.length>0) ?

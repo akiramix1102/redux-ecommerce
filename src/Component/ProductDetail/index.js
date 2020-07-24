@@ -8,7 +8,7 @@ import Description from './Description'
 import RelatedProduct from './Ralated'
 import Banner from '../Banner-Promotion/banner_new_in'
 import Footer from '../Footer'
-
+import Helmet from 'react-helmet';
 
 function ProuctDetail() {
     const { id,title } = useParams();
@@ -29,6 +29,9 @@ function ProuctDetail() {
     
     return (
         <>
+            <Helmet>
+    <title>{title}</title>
+            </Helmet>
             <Banner/>
             <Container className="mt-5">
                 <Row>

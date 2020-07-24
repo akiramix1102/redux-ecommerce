@@ -4,6 +4,7 @@ import Filter from './Filter/Filter'
 import Items from './Item/Items'
 import Banner from '../Banner-Promotion/banner_new_in'
 import Footer from '../Footer'
+import Helmet from 'react-helmet';
 function Products() {
 
     const [min, setMin] = useState(0)
@@ -15,6 +16,9 @@ function Products() {
     }
     return (
         <>
+        <Helmet>
+            <title>Products</title>
+        </Helmet>
             <Banner />
             <section className="all-products">
                 <Container>

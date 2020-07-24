@@ -11,6 +11,7 @@ import Pagination from './Pagination'
 import Swal from 'sweetalert2'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Helmet from 'react-helmet';
 
 function DashBoard(props) {
     const [products, setProducts] = useState([]);
@@ -159,6 +160,12 @@ function DashBoard(props) {
     };
 
     return (
+        <>
+        <Helmet>
+        <title>
+            Dashboard
+        </title>
+        </Helmet>
         <section className="dashboard">
             <Container>
                 <div className="text-center title">
@@ -208,6 +215,7 @@ function DashBoard(props) {
                 pauseOnHover
             />
         </section>
+        </>
     );
 }
 

@@ -10,7 +10,7 @@ import Footer from '../Footer'
 import cartStyles from './Cart.module.scss'
 import  './Cart.module.scss'
 import bag from '../../imgs/blue_shoppictbasket_1484336511-1.png'
-
+import Helmet from 'react-helmet';
 
 function Cart() {
 
@@ -44,6 +44,11 @@ function Cart() {
 
     return (
         <>
+        <Helmet>
+            <title>
+                Shopping Cart
+            </title>
+        </Helmet>
             <Banner />
             {
                 (listProduct.length > 0) ?

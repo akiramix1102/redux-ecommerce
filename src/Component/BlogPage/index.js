@@ -9,9 +9,15 @@ import img_blog_2 from '../../imgs/blog/blog1.jpeg'
 import img_blog_3 from '../../imgs/blog/blog3.jpeg'
 import Banner from '../Banner-Promotion/banner_new_in'
 import Footer from '../Footer'
+import Helmet from 'react-helmet';
 function index() {
     return (
         <>
+        <Helmet>
+            <title>
+                Our Blog
+            </title>
+        </Helmet>
             <Banner />
             <Container>
                 <Row className="mt-5 blog-page">

@@ -14,10 +14,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Subscribe from '../Subscribe'
 import Footer from '../Footer'
+import Helmet from 'react-helmet';
 
 function index() {
     return (
         <>
+        <Helmet>
+            <title>
+                About Us
+            </title>
+        </Helmet>
             <Banner />
             <Container>
                 <Row className="about mt-5">

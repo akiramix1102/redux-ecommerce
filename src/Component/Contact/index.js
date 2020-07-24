@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../Banner-Promotion/banner_new_in";
 import { Container, Row, Col } from "react-bootstrap";
 import Form from "./Form";
 import ContactInfo from "./ContactInfo";
 import Footer from '../Footer'
+import Helmet from 'react-helmet';
 
-function index(props) {
+function Contact() {
+
     return (
         <>
+            <Helmet>
+                <title>Contact Us</title>
+            </Helmet>
+
             <Banner />
             <Container>
                 <Row className="contact">
@@ -24,8 +30,10 @@ function index(props) {
                 </Row>
             </Container>
             <Footer/>
+
         </>
+
     );
 }
 
-export default index;
+export default Contact;

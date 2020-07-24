@@ -7,12 +7,15 @@ import Deal from '../Deal';
 import Blog from '../Blog'
 import Subscribe from '../Subscribe'
 import Footer from '../Footer'
+import Helmet from 'react-helmet';
 function Home() {
-    useEffect(()=>{
-        document.title="Home"
-    })
     return (
         <>
+        <Helmet>
+            <title>
+                Home
+            </title>
+        </Helmet>
             <Slide />
             <Feature />
             <BannerNewIn/>
