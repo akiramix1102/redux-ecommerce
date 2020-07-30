@@ -3,12 +3,37 @@
     margin-top: 100px;
     padding: 70px 50px;
     margin-bottom: 100px;
+
+    @include mobile{
+        margin-bottom: 25px;
+    }
+
     &__form {
         padding: 0 70px 0 100px !important;
+
+        @include mobile{
+            padding: 0 15px !important;
+            margin-bottom: 25px;
+        }
+
+        @include tablet{
+            padding: 0 15px !important;
+        }
+
+        @include large-tablet{
+            padding: 0 15px !important;
+            margin-bottom: 25px;
+        }
+
+        @include desktop{
+            padding: 0 15px !important;
+        }
+
         h2 {
             font-weight: 600;
             margin-bottom: 20px;
         }
+
         .form-group {
             input {
                 border: none;
@@ -38,8 +63,27 @@
             }
         }
     }
+
     &__info {
         padding-right: 100px !important;
+
+        @include mobile{
+            padding: 0 15px !important;
+        }
+
+        @include tablet{
+            margin-top: 25px;
+            padding: 0 15px !important;
+        }
+
+        @include large-tablet{
+            padding: 0 15px !important;
+        }
+
+        @include desktop{
+            padding: 0 15px !important;
+        }
+
         h2 {
             font-weight: 600;
             margin-bottom: 20px;

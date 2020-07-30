@@ -49,7 +49,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />
-          <Route exact path="/wishlist" component={WishList} />
+          <Route  path="/wishlist" component={WishList} />
           <Route path="/checkout" component={CheckOut} />
           <Route path="/dashboard" component={DashBoard} />
         </Switch>

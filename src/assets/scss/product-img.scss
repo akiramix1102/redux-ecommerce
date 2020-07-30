@@ -1,0 +1,19 @@
+.product-img {
+    .row{
+        align-items: stretch !important;
+    }
+    &__small {
+        img:first-child {
+            @include large-tablet {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            display: none;
+        }
+    }
+}

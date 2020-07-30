@@ -75,7 +75,7 @@ function Cart() {
                                 </Col>
                             </Row>
                             <Row className={cartStyles["coupon"]}>
-                                <Col md={5} className={cartStyles["coupon__action"]}>
+                                <Col md={8} className={cartStyles["coupon__action"]}>
                                     <form action="">
                                         <input type="text"
                                             value={coupon}
@@ -85,7 +85,7 @@ function Cart() {
                                         <button onClick={e=>handleApplyCoupon(e)}>apply coupon</button>
                                     </form>
                                 </Col>
-                                <Col md={3} className={cartStyles["clear"]}>
+                                <Col md={4} className={cartStyles["clear"]}>
                                     <button onClick={handleClearCart}>Clear shopping cart</button>
                                 </Col>
                             </Row>

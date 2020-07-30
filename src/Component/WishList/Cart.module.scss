@@ -1,5 +1,5 @@
 /* Cart module */
-
+@import "../../assets/scss/abstract/mixins.scss";
 .table {
     text-align: center;
     margin-top: 50px;
@@ -8,6 +8,39 @@
         font-weight: 600;
         text-transform: uppercase;
         color: #666666;
+
+        tr {
+            th {
+                &:nth-child(4){
+                    @include mobile{
+                        padding: 0 50px;
+                    }
+                    @include tablet{
+                        padding: 0 50px;
+                    }
+                }
+                &:last-child{
+                    @include mobile{
+                        padding: 0 80px;
+                    }
+                    @include tablet{
+                        padding: 0 80px;
+                    }
+                }
+                @include mobile {
+                    padding: 0 35px;
+                    vertical-align: middle;
+                }
+                @include tablet{
+                    padding: 0 35px;
+                    vertical-align: middle;
+                }
+                @include large-tablet{
+                    vertical-align: middle;
+                }
+
+            }
+        }
     }
     .product {
         .product__quantity {

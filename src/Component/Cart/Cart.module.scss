@@ -1,4 +1,5 @@
 /* Cart module */
+@import "../../assets/scss/abstract/mixins.scss";
 .table {
     text-align: center;
     margin-top: 50px;
@@ -7,6 +8,21 @@
         font-weight: 600;
         text-transform: uppercase;
         color: #666666;
+        tr {
+            th {
+                @include mobile {
+                    padding: 0 35px;
+                    vertical-align: middle;
+                }
+                @include tablet{
+                    padding: 0 35px;
+                    vertical-align: middle;
+                }
+                @include large-tablet{
+                    vertical-align: middle;
+                }
+            }
+        }
     }
     .product {
         .product__quantity {
@@ -14,26 +30,37 @@
                 width: 25%;
                 text-align: center;
             }
-            button{
-               
+            button {
                 padding: 0 10px;
                 margin: 0 5px;
             }
-
         }
-        td{
+        td {
             vertical-align: middle;
         }
     }
 }
-.coupon{
+.coupon {
     margin-top: 50px;
     justify-content: space-between;
-    input{
+    form{
+        @include mobile{
+            display: flex;
+            justify-content: space-between;
+        }
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    input {
         padding: 10px 25px;
         border: 1px solid #ccc;
+        @include mobile{
+            padding: 5px;
+        }
     }
-    button{
+    button {
         padding: 12px 20px;
         margin-left: 10px;
         background: transparent;
@@ -43,39 +70,46 @@
         color: #3b3e79;
         font-weight: bold;
         transition: 0.3s;
-        &:hover{
+        &:hover {
             background-color: #fdba2d;
             color: #fff;
         }
     }
-    .clear{
+    .clear {
         text-align: right;
+        @include mobile{
+            margin-top: 20px;
+        }
+        @include tablet{
+            margin-top: 25px;
+        }
     }
 }
-.total{
+.total {
     margin-top: 50px;
     justify-content: flex-end;
     margin-bottom: 50px;
-    h4{
+    h4 {
         color: #3b3e79;
         font-weight: bold;
         margin-bottom: 20px;
     }
-    ul{
+    ul {
         border: 1px solid #ccc;
         margin-bottom: 20px;
-        li{
+        li {
             padding: 20px;
-            span{
+            span {
                 float: right;
             }
         }
-        & li:first-child,& li:nth-child(2){
+        & li:first-child,
+        & li:nth-child(2) {
             border-bottom: 1px solid #ccc;
         }
     }
-    button{
-        background-color: #2B96CC;
+    button {
+        background-color: #2b96cc;
         padding: 10px 25px;
         text-transform: uppercase;
         font-weight: 600;
@@ -83,13 +117,13 @@
         border: none;
         transition: 0.3s;
         float: right;
-        &:hover{
+        &:hover {
             background-color: #fdba2d;
-
         }
     }
 }
-.backtohome{
+
+.backtohome {
     display: inline-block;
     margin-top: 5px;
     padding: 10px 25px;
@@ -98,13 +132,16 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
-    &:hover{
+    &:hover {
         text-decoration: none;
-        background-color: #2B96CC;
+        background-color: #2b96cc;
         color: #fff;
+    }
+    @include mobile{
+        margin: 0 auto;
     }
 }
 
-.new-in{
+.new-in {
     margin-top: 0;
 }

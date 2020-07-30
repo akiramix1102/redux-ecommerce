@@ -1,7 +1,21 @@
 .info {
+    @include mobile{
+        margin-top: 25px;
+    }
+    @include tablet{
+        margin-top: 25px;
+    }
     h3 {
         font-weight: 500;
         font-family: sans-serif;
+
+        @include mobile{
+            font-size: 24px;
+        }
+
+        @include tablet{
+            font-size: 28px;
+        }
     }
     &__price {
         color: #d10024;

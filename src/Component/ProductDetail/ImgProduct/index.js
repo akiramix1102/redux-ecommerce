@@ -16,14 +16,14 @@ function ProductImg(props) {
     return (
         <Col lg={6} className="product-img">
             <Row className="align-items-center">
-                <Col lg={3}>
+                <Col lg={3} md={6} className="product-img__small">
                     {product.map(item => {
                         return (
                             item.smallImg.map((img, index) => <img src={img} key={index} onClick={e=>handleClick(e)} className="img-fluid mb-3" />)
                         )
                     })}
                 </Col>
-                <Col lg={9}>
+                <Col lg={9} md={6} className="product-img__large">
                     {product.map(item => <img src={item.images} className="img-fluid" key={1}/>)}
                 </Col>
             </Row>

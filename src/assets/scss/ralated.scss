@@ -46,6 +46,15 @@
                     color: #555555;
                     position: relative;
                     margin-bottom: 1rem;
+
+                    @include mobile{
+                        font-size: 16px;
+                    }
+
+                    @include tablet{
+                        font-size: 18px;
+                    }
+
                     &:hover {
                         color: #337ab7;
                     }
@@ -58,6 +67,13 @@
                         background-color: rgba(26, 23, 23, 0.5);
                         top: 50%;
                         transform: translateY(-50%);
+
+                        @include mobile{
+                            display: none;
+                        }
+                        @include tablet{
+                            display: none;
+                        }
                     }
                     &::before {
                         left: -40px;
